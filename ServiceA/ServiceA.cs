@@ -12,14 +12,14 @@ using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
 using Microsoft.ServiceFabric.Data;
 
-namespace NanoFabricApplication
+namespace ServiceA
 {
     /// <summary>
     /// The FabricRuntime creates an instance of this class for each service type instance. 
     /// </summary>
-    internal sealed class NanoFabricApplication : StatelessService
+    internal sealed class ServiceA : StatelessService
     {
-        public NanoFabricApplication(StatelessServiceContext context)
+        public ServiceA(StatelessServiceContext context)
             : base(context)
         { }
 

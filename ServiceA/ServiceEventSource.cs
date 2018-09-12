@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Services.Runtime;
 
-namespace NanoFabricApplication
+namespace ServiceA
 {
-    [EventSource(Name = "MyCompany-NanoFabric_ServiceFabric-NanoFabricApplication")]
+    [EventSource(Name = "MyCompany-NanoFabric_ServiceFabric-ServiceA")]
     internal sealed class ServiceEventSource : EventSource
     {
         public static readonly ServiceEventSource Current = new ServiceEventSource();

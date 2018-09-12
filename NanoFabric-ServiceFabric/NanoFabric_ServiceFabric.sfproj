@@ -32,7 +32,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NanoFabricApplication\NanoFabricApplication.csproj" />
+    <ProjectReference Include="..\Gateway\Gateway.csproj" />
+    <ProjectReference Include="..\ServiceA\ServiceA.csproj" />
+    <ProjectReference Include="..\ServiceOAuth\ServiceOAuth.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <PropertyGroup>
