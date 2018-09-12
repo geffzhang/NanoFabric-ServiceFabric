@@ -9,7 +9,7 @@ using Microsoft.ServiceFabric.Services.Runtime;
 
 namespace NanoFabricGateway
 {
-    [EventSource(Name = "MyCompany-NanoFabric_ServiceFabric-NanoFabricApplication")]
+    [EventSource(Name = "MyCompany-NanoServiceFabric-Gateway")]
     internal sealed class ServiceEventSource : EventSource
     {
         public static readonly ServiceEventSource Current = new ServiceEventSource();

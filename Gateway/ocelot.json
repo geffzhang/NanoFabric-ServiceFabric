@@ -1,0 +1,42 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/{route}",
+      "UpstreamPathTemplate": "/servicea/{route}",
+      "UpstreamHttpMethod": [ "Get", "Options" ],
+      "DownstreamScheme": "http",
+      "ServiceName": "NanoFabric_ServiceFabric/ServiceA",
+      "UseServiceDiscovery": true,
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "apikey",
+      //  "AllowedScopes": []
+      //},
+      //"AddHeadersToRequest": {
+      //  "claims_City": "Claims[City] > value > |",
+      //  "claims_State": "Claims[State] > value > |"
+      //},
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/{route}",
+      "UpstreamPathTemplate": "/serviceoauth/{route}",
+      "UpstreamHttpMethod": [ "Get", "Options", "Post" ],
+      "DownstreamScheme": "http",
+      "ServiceName": "NanoFabric_ServiceFabric/ServiceOAuth",
+      "UseServiceDiscovery": true
+    }
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "/administration",
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 19081,
+      "Type": "ServiceFabric"
+    }
+  }
+}

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Fabric;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ServiceA.Controllers
@@ -10,11 +12,23 @@ namespace ServiceA.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly StatelessServiceContext context;
+        private readonly IHttpContextAccessor accessor;
+
+        public ValuesController(StatelessServiceContext context, IHttpContextAccessor accessor)
+        {
+            this.context = context;
+            this.accessor = accessor;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var city = this.accessor.HttpContext.Request.Headers["City"];
+            var state = this.accessor.HttpContext.Request.Headers["State"];
+
+            return new string[] { "NodeName", context.NodeContext.NodeName ,city , state};
         }
 
         // GET api/values/5
