@@ -22,7 +22,7 @@
     <ServiceManifestRef ServiceManifestName="NanoFabricGatewayPkg" ServiceManifestVersion="1.0.0" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
-      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[ServiceA_ASPNETCORE_ENVIRONMENT]" />
+      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[NanoFabricGateway_ASPNETCORE_ENVIRONMENT]" />
     </EnvironmentOverrides>
   </ServiceManifestImport>
   <ServiceManifestImport>
@@ -43,8 +43,8 @@
         <SingletonPartition />
       </StatelessService>
     </Service>
-    <Service Name="ServiceA" ServicePackageActivationMode="ExclusiveProcess">
-      <StatelessService ServiceTypeName="NanoFabricGatewayType" InstanceCount="[ServiceA_InstanceCount]">
+    <Service Name="NanoFabricGateway" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="NanoFabricGatewayType" InstanceCount="[NanoFabricGateway_InstanceCount]">
         <SingletonPartition />
       </StatelessService>
     </Service>
