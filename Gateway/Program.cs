@@ -2,6 +2,7 @@
 using Microsoft.ServiceFabric.Services.Runtime;
 using System;
 using System.Diagnostics;
+using System.Diagnostics.Tracing;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,6 +18,10 @@ namespace NanoFabricGateway
         {
             try
             {
+                //Creating a new event listener to redirect the traces to a file
+                ServiceEventListener listener = new ServiceEventListener("NanoFabricGateway");
+                listener.EnableEvents(ServiceEventSource.Current, EventLevel.LogAlways, EventKeywords.All);
+
                 // The ServiceManifest.XML file defines one or more service type names.
                 // Registering a service maps a service type name to a .NET type.
                 // When Service Fabric creates an instance of this service type,
@@ -30,17 +35,17 @@ namespace NanoFabricGateway
                 // Prevents this host process from terminating so services keeps running. 
                 Thread.Sleep(Timeout.Infinite);
 
-                //         IWebHostBuilder builder = new WebHostBuilder();
-                //         builder.UseKestrel()
-                //.UseContentRoot(Directory.GetCurrentDirectory())
-                //.UseIISIntegration()
-                //.UseStartup<Startup>();
-                //         var host = builder.Build();
-                //         host.Run();
+       //         IWebHostBuilder builder = new WebHostBuilder();
+       //         builder.UseKestrel()
+       //.UseContentRoot(Directory.GetCurrentDirectory())
+       //.UseIISIntegration()
+       //.UseStartup<Startup>();
+       //         var host = builder.Build();
+       //         host.Run();
             }
             catch (Exception e)
             {
-                ServiceEventSource.Current.ServiceHostInitializationFailed(e.ToString());
+                ServiceEventSource.Current.ServiceHostInitializationFailed(e);
                 throw;
             }
         }
