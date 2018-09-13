@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Gateway (Ocelot)", "3 Gat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway", "Gateway\Gateway.csproj", "{6D72B212-FDBD-4FA9-AEA1-ED510CBC2AB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceOAuth", "ServiceOAuth\ServiceOAuth.csproj", "{062BF85B-60B5-4F9A-B999-FDAF2FAA987F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceOAuth", "ServiceOAuth\ServiceOAuth.csproj", "{062BF85B-60B5-4F9A-B999-FDAF2FAA987F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 IdentityServer 4", "2 IdentityServer 4", "{887E702A-FDC4-4606-AF11-B9865776C908}"
 EndProject
@@ -28,7 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - ServiceA", "01 - ServiceA", "{9168EE89-0A52-404D-BBF6-C71DCDDD0FA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceA", "ServiceA\ServiceA.csproj", "{97471B6E-42A0-4FDA-BE4C-33D6D6FF77F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceA", "ServiceA\ServiceA.csproj", "{97471B6E-42A0-4FDA-BE4C-33D6D6FF77F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

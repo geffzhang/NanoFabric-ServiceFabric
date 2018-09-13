@@ -1,9 +1,9 @@
 {
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/{route}",
-      "UpstreamPathTemplate": "/servicea/{route}",
-      "UpstreamHttpMethod": [ "Get", "Options" ],
+      "DownstreamPathTemplate": "/api/values",
+      "UpstreamPathTemplate": "/servicea/api/values",
+      "UpstreamHttpMethod": [ "Get"],
       "DownstreamScheme": "http",
       "ServiceName": "NanoFabric_ServiceFabric/ServiceA",
       "UseServiceDiscovery": true,

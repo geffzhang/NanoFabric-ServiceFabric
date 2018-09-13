@@ -1,6 +1,8 @@
-﻿using Microsoft.ServiceFabric.Services.Runtime;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.ServiceFabric.Services.Runtime;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -27,6 +29,14 @@ namespace ServiceA
 
                 // Prevents this host process from terminating so services keeps running. 
                 Thread.Sleep(Timeout.Infinite);
+
+       //         IWebHostBuilder builder = new WebHostBuilder();
+       //         builder.UseKestrel()
+       //.UseContentRoot(Directory.GetCurrentDirectory())
+       //.UseIISIntegration()
+       //.UseStartup<Startup>();
+       //         var host = builder.Build();
+       //         host.Run();
             }
             catch (Exception e)
             {
