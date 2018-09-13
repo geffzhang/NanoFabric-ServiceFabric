@@ -34,14 +34,7 @@ namespace NanoFabricGateway
 
                 // Prevents this host process from terminating so services keeps running. 
                 Thread.Sleep(Timeout.Infinite);
-
-       //         IWebHostBuilder builder = new WebHostBuilder();
-       //         builder.UseKestrel()
-       //.UseContentRoot(Directory.GetCurrentDirectory())
-       //.UseIISIntegration()
-       //.UseStartup<Startup>();
-       //         var host = builder.Build();
-       //         host.Run();
+ 
             }
             catch (Exception e)
             {

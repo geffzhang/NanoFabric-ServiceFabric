@@ -2,11 +2,11 @@
 <ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="NanoFabric_ServiceFabricType" ApplicationTypeVersion="1.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
     <Parameter Name="ServiceA_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
-    <Parameter Name="ServiceA_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="ServiceA_InstanceCount" DefaultValue="2" />
     <Parameter Name="NanoFabricGateway_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
     <Parameter Name="NanoFabricGateway_InstanceCount" DefaultValue="-1" />
     <Parameter Name="ServiceOAuth_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
-    <Parameter Name="ServiceOAuth_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="ServiceOAuth_InstanceCount" DefaultValue="2" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
