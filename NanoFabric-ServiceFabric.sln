@@ -30,6 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - ServiceA", "01 - Servi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceA", "ServiceA\ServiceA.csproj", "{97471B6E-42A0-4FDA-BE4C-33D6D6FF77F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontendConsoleApp", "FrontendConsoleApp\FrontendConsoleApp.csproj", "{86128F8B-D084-4A70-B5D3-20C61D0F2703}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,14 @@ Global
 		{97471B6E-42A0-4FDA-BE4C-33D6D6FF77F3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{97471B6E-42A0-4FDA-BE4C-33D6D6FF77F3}.Release|x64.ActiveCfg = Release|Any CPU
 		{97471B6E-42A0-4FDA-BE4C-33D6D6FF77F3}.Release|x64.Build.0 = Release|Any CPU
+		{86128F8B-D084-4A70-B5D3-20C61D0F2703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86128F8B-D084-4A70-B5D3-20C61D0F2703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86128F8B-D084-4A70-B5D3-20C61D0F2703}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{86128F8B-D084-4A70-B5D3-20C61D0F2703}.Debug|x64.Build.0 = Debug|Any CPU
+		{86128F8B-D084-4A70-B5D3-20C61D0F2703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86128F8B-D084-4A70-B5D3-20C61D0F2703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86128F8B-D084-4A70-B5D3-20C61D0F2703}.Release|x64.ActiveCfg = Release|Any CPU
+		{86128F8B-D084-4A70-B5D3-20C61D0F2703}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +90,7 @@ Global
 		{062BF85B-60B5-4F9A-B999-FDAF2FAA987F} = {887E702A-FDC4-4606-AF11-B9865776C908}
 		{9168EE89-0A52-404D-BBF6-C71DCDDD0FA0} = {F0CBE0A6-D074-41EB-B4ED-81B09F4C4836}
 		{97471B6E-42A0-4FDA-BE4C-33D6D6FF77F3} = {9168EE89-0A52-404D-BBF6-C71DCDDD0FA0}
+		{86128F8B-D084-4A70-B5D3-20C61D0F2703} = {C3FD34D2-A4BE-4C58-B132-C7ECD9AE74FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {48D71DA5-E339-4373-9156-2D72D67E53EF}

@@ -97,6 +97,7 @@ namespace NanoFabricGateway
                     {
                         o.Authority = authority;
                         o.ApiName = "api1";
+                        o.SupportedTokens = SupportedTokens.Both;
                         o.RequireHttpsMetadata = false;
                     };
 

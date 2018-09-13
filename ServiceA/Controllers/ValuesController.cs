@@ -12,12 +12,13 @@ namespace ServiceA.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        //private readonly StatelessServiceContext context;
+        private readonly StatelessServiceContext context;
+
         private readonly IHttpContextAccessor accessor;
 
-        public ValuesController(/*StatelessServiceContext context,*/ IHttpContextAccessor accessor)
+        public ValuesController(StatelessServiceContext context, IHttpContextAccessor accessor)
         {
-            //this.context = context;
+            this.context = context;
             this.accessor = accessor;
         }
 
@@ -25,10 +26,10 @@ namespace ServiceA.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            var city = this.accessor.HttpContext.Request.Headers["City"];
-            var state = this.accessor.HttpContext.Request.Headers["State"];
+            var city = this.accessor.HttpContext.Request.Headers["claims_City"];
+            var state = this.accessor.HttpContext.Request.Headers["claims_State"];
 
-            return new string[] { "NodeName",/* context.NodeContext.NodeName*/"" ,city , state};
+            return new string[] { "NodeName", context.NodeContext.NodeName ,city , state};
         }
 
         // GET api/values/5

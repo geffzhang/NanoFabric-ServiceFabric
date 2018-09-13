@@ -30,15 +30,12 @@ namespace ServiceOAuth.Configuration
                 {
                     ClientId = "52abp",
                     ClientSecrets = { new Secret("secret".Sha256()) },
-                    AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     AccessTokenType = AccessTokenType.Jwt,
-                    //RedirectUris = { "http://localhost:9000/signin-oidc" },
                     AllowedScopes = {
-                        StandardScopes.OpenId,
-                        StandardScopes.Profile,
-                        StandardScopes.OfflineAccess,
                         "api1"
-                    }
+                    },
+                    AlwaysSendClientClaims = true
                 }
             };
         }

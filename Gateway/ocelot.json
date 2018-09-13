@@ -7,14 +7,14 @@
       "DownstreamScheme": "http",
       "ServiceName": "NanoFabric_ServiceFabric/ServiceA",
       "UseServiceDiscovery": true,
-      //"AuthenticationOptions": {
-      //  "AuthenticationProviderKey": "apikey",
-      //  "AllowedScopes": []
-      //},
-      //"AddHeadersToRequest": {
-      //  "claims_City": "Claims[City] > value > |",
-      //  "claims_State": "Claims[State] > value > |"
-      //},
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "apikey",
+        "AllowedScopes": []
+      },
+      "AddHeadersToRequest": {
+        "claims_City": "Claims[City] > value > |",
+        "claims_State": "Claims[State] > value > |"
+      },
       "QoSOptions": {
         "ExceptionsAllowedBeforeBreaking": 3,
         "DurationOfBreak": 10,
