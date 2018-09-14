@@ -4,7 +4,7 @@
     <Parameter Name="ServiceA_ASPNETCORE_ENVIRONMENT" Value="Development" />
     <Parameter Name="ServiceA_InstanceCount" Value="1" />
     <Parameter Name="NanoFabricGateway_ASPNETCORE_ENVIRONMENT" Value="Development" />
-    <Parameter Name="NanoFabricGateway_InstanceCount" Value="1" />
+    <Parameter Name="NanoFabricGateway_InstanceCount" Value="-1" />
     <Parameter Name="ServiceOAuth_ASPNETCORE_ENVIRONMENT" Value="Development" />
     <Parameter Name="ServiceOAuth_InstanceCount" Value="1" />
   </Parameters>

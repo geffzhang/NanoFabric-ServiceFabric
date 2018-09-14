@@ -21,9 +21,11 @@ namespace FrontendConsoleApp
 
             var httpClient = new HttpClient();
             httpClient.SetBearerToken(tokenResponse.AccessToken);
-
-            string response = httpClient.GetStringAsync($"http://localhost:8492/servicea/api/values").ConfigureAwait(false).GetAwaiter().GetResult();
-            Console.WriteLine(response);
+            for (int i = 0; i < 10; i++)
+            {
+                string response = httpClient.GetStringAsync($"http://localhost:8492/servicea/api/values").ConfigureAwait(false).GetAwaiter().GetResult();
+                Console.WriteLine(response);
+            }
             Console.ReadLine();
 
         }
