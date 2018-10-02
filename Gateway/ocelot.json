@@ -29,43 +29,14 @@
       "ServiceName": "NanoFabric_ServiceFabric/ServiceOAuth",
       "UseServiceDiscovery": true
     },
-    //{
-    //  "DownstreamPathTemplate": "/api/{route}",
-    //  "UpstreamPathTemplate": "/api/{url}",
-    //  "UpstreamHttpMethod": [ "Get", "Options", "Post","Delete","Put" ],
-    //  "DownstreamScheme": "http",
-    //  "ServiceName": "NanoFabric_ServiceFabric/AdminApi",
-    //  "UseServiceDiscovery": true,
-    //  //"AuthenticationOptions": {
-    //  //  "AuthenticationProviderKey": "apikey",
-    //  //  "AllowedScopes": []
-    //  //},
-    //  //"AddHeadersToRequest": {
-    //  //  "claims_City": "Claims[City] > value > |",
-    //  //  "claims_State": "Claims[State] > value > |"
-    //  //},
-    //  //"QoSOptions": {
-    //  //  "ExceptionsAllowedBeforeBreaking": 3,
-    //  //  "DurationOfBreak": 10,
-    //  //  "TimeoutValue": 5000
-    //  //}
-    //}
-    //{
-    //  "DownstreamPathTemplate": "/{route}",
-    //  "UpstreamPathTemplate": "/adminapi/{route}",
-    //  "UpstreamHttpMethod": [ "Get", "Options", "Post" ],
-    //  "DownstreamScheme": "http",
-    //  "ServiceName": "NanoFabric_ServiceFabric/AdminApi",
-    //  "UseServiceDiscovery": true
-    //},
-    //{
-    //  "DownstreamPathTemplate": "/{route}",
-    //  "UpstreamPathTemplate": "/admin/{route}",
-    //  "UpstreamHttpMethod": [ "Get", "Options", "Post" ],
-    //  "DownstreamScheme": "http",
-    //  "ServiceName": "NanoFabric_ServiceFabric/AdminUI",
-    //  "UseServiceDiscovery": true
-    //}
+    { // admin apis
+      "ServiceName": "NanoFabric_ServiceFabric/AbpHost",
+      "DownstreamPathTemplate": "/{route}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/test/{route}",
+      "UpstreamHttpMethod": [ "Options", "Get", "Post", "Delete", "Put" ],
+      "UseServiceDiscovery": true
+    }
   ],
   "GlobalConfiguration": {
     "RequestIdKey": "OcRequestId",
