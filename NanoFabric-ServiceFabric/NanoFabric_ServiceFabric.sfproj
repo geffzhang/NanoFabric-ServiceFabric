@@ -32,6 +32,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\52ABP\LTMCompanyNameFree.YoyoCmsTemplate.Web.Host\LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.csproj" />
+    <ProjectReference Include="..\52ABP\SPAHost\SPAHost.csproj" />
     <ProjectReference Include="..\Gateway\Gateway.csproj" />
     <ProjectReference Include="..\ServiceA\ServiceA.csproj" />
     <ProjectReference Include="..\ServiceOAuth\ServiceOAuth.csproj" />

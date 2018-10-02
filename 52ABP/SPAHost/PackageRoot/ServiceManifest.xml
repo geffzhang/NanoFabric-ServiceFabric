@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceManifest Name="SPAHostPkg"
+                 Version="1.0.0"
+                 xmlns="http://schemas.microsoft.com/2011/01/fabric"
+                 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ServiceTypes>
+    <!-- 这是 ServiceType 的名称。
+         此名称必须与 Program.cs 中的 RegisterServiceType 调用中所用字符串相同。 -->
+    <StatelessServiceType ServiceTypeName="SPAHostType" />
+  </ServiceTypes>
+
+  <!-- 代码包是指服务可执行文件。 -->
+  <CodePackage Name="Code" Version="1.0.0">
+    <EntryPoint>
+      <ExeHost>
+        <Program>SPAHost.exe</Program>
+        <WorkingFolder>CodePackage</WorkingFolder>
+      </ExeHost>
+    </EntryPoint>
+    <EnvironmentVariables>
+      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value=""/>
+    </EnvironmentVariables>
+  </CodePackage>
+
+  <!-- 配置包是 PackageRoot 下 Config 目录的内容，它包含服务的一组 
+       可独立更新且固定版本的自定义配置设置。-->
+  <ConfigPackage Name="Config" Version="1.0.0" />
+
+  <Resources>
+    <Endpoints>
+      <!-- 通信侦听器使用此终结点来获取要侦听的端口。
+           请注意，如果你的服务已分区，
+           与位于代码中的各分区的副本共享此端口。-->
+      <Endpoint Protocol="http" Name="ServiceEndpoint" Type="Input" Port="10091" />
+    </Endpoints>
+  </Resources>
+</ServiceManifest>

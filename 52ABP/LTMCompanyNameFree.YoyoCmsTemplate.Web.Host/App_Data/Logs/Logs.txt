@@ -1,0 +1,195 @@
+DEBUG 2018-10-02 14:26:46,110 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-10-02 14:26:46,135 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-10-02 14:26:46,150 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup.YoyoCmsTemplateWebHostModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,153 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateApplicationModule, LTMCompanyNameFree.YoyoCmsTemplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,155 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,155 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateEntityFrameworkModule, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,156 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,156 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,156 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,156 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,156 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,157 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:26:46,159 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-10-02 14:26:46,215 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:26:46,215 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:26:46,215 [1    ] o.Configuration.LanguageManagementConfig - Converted YoyoCmsTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:26:46,215 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+FATAL 2018-10-02 14:26:46,257 [1    ] Abp.AbpBootstrapper                      - System.IO.FileLoadException: Could not load file or assembly 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.ConfigureTokenAuth()
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.PreInitialize() in D:\CodeManager\Demos\LTMCompanyNameFree.YoyoCmsTemplate\src\aspnet-core\src\LTMCompanyNameFree.YoyoCmsTemplate.Web.Core\YoyoCmsTemplateWebCoreModule.cs:line 53
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 47
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+
+
+System.IO.FileLoadException: Could not load file or assembly 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.ConfigureTokenAuth()
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.PreInitialize() in D:\CodeManager\Demos\LTMCompanyNameFree.YoyoCmsTemplate\src\aspnet-core\src\LTMCompanyNameFree.YoyoCmsTemplate.Web.Core\YoyoCmsTemplateWebCoreModule.cs:line 53
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 47
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+
+
+FATAL 2018-10-02 14:26:46,271 [1    ] soft.AspNetCore.Hosting.Internal.WebHost - Application startup exception
+System.IO.FileLoadException: Could not load file or assembly 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.ConfigureTokenAuth()
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.PreInitialize() in D:\CodeManager\Demos\LTMCompanyNameFree.YoyoCmsTemplate\src\aspnet-core\src\LTMCompanyNameFree.YoyoCmsTemplate.Web.Core\YoyoCmsTemplateWebCoreModule.cs:line 53
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 47
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.InitializeAbp(IApplicationBuilder app) in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 67
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.UseAbp(IApplicationBuilder app, Action`1 optionsAction) in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 38
+   at LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) in D:\CodeManager\Demos\LTMCompanyNameFree.YoyoCmsTemplate\src\aspnet-core\src\LTMCompanyNameFree.YoyoCmsTemplate.Web.Host\Startup\Startup.cs:line 93
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+
+
+INFO  2018-10-02 14:26:46,625 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-10-02 14:26:46,787 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 161.1252ms 500 text/html; charset=utf-8
+INFO  2018-10-02 14:26:47,500 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/favicon.ico  
+INFO  2018-10-02 14:26:47,505 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.7904ms 500 text/html; charset=utf-8
+DEBUG 2018-10-02 14:27:26,253 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-10-02 14:27:26,291 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-10-02 14:27:26,310 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup.YoyoCmsTemplateWebHostModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,314 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,314 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateApplicationModule, LTMCompanyNameFree.YoyoCmsTemplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,315 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,315 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,315 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,316 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,316 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,317 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateEntityFrameworkModule, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,317 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,317 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:27:26,322 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-10-02 14:27:26,417 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:27:26,417 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:27:26,417 [1    ] o.Configuration.LanguageManagementConfig - Converted YoyoCmsTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:27:26,417 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+FATAL 2018-10-02 14:27:26,467 [1    ] Abp.AbpBootstrapper                      - System.IO.FileLoadException: Could not load file or assembly 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.ConfigureTokenAuth()
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.PreInitialize() in D:\CodeManager\Demos\LTMCompanyNameFree.YoyoCmsTemplate\src\aspnet-core\src\LTMCompanyNameFree.YoyoCmsTemplate.Web.Core\YoyoCmsTemplateWebCoreModule.cs:line 53
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 47
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+
+
+System.IO.FileLoadException: Could not load file or assembly 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.ConfigureTokenAuth()
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.PreInitialize() in D:\CodeManager\Demos\LTMCompanyNameFree.YoyoCmsTemplate\src\aspnet-core\src\LTMCompanyNameFree.YoyoCmsTemplate.Web.Core\YoyoCmsTemplateWebCoreModule.cs:line 53
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 47
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+
+
+FATAL 2018-10-02 14:27:26,484 [1    ] soft.AspNetCore.Hosting.Internal.WebHost - Application startup exception
+System.IO.FileLoadException: Could not load file or assembly 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.ConfigureTokenAuth()
+   at LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule.PreInitialize() in D:\CodeManager\Demos\LTMCompanyNameFree.YoyoCmsTemplate\src\aspnet-core\src\LTMCompanyNameFree.YoyoCmsTemplate.Web.Core\YoyoCmsTemplateWebCoreModule.cs:line 53
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 47
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.InitializeAbp(IApplicationBuilder app) in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 67
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.UseAbp(IApplicationBuilder app, Action`1 optionsAction) in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 38
+   at LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) in D:\CodeManager\Demos\LTMCompanyNameFree.YoyoCmsTemplate\src\aspnet-core\src\LTMCompanyNameFree.YoyoCmsTemplate.Web.Host\Startup\Startup.cs:line 93
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+
+
+INFO  2018-10-02 14:27:27,007 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-10-02 14:27:27,236 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 224.0929ms 500 text/html; charset=utf-8
+INFO  2018-10-02 14:27:27,935 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/favicon.ico  
+INFO  2018-10-02 14:27:27,940 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.7668ms 500 text/html; charset=utf-8
+DEBUG 2018-10-02 14:30:20,334 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-10-02 14:30:20,367 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-10-02 14:30:20,391 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup.YoyoCmsTemplateWebHostModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,396 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,396 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateApplicationModule, LTMCompanyNameFree.YoyoCmsTemplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,396 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,397 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,397 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,397 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,398 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,399 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateEntityFrameworkModule, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,399 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,399 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,399 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,400 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,400 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,400 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:20,404 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-10-02 14:30:20,486 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:30:20,486 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:30:20,486 [1    ] o.Configuration.LanguageManagementConfig - Converted YoyoCmsTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:30:20,486 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:30:20,868 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateDbContext, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:30:21,382 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-10-02 14:30:21,452 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-10-02 14:30:21,507 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-10-02 14:30:21,543 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: YoyoCmsTemplate
+DEBUG 2018-10-02 14:30:21,577 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-10-02 14:30:21,613 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-10-02 14:30:21,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-10-02 14:30:21,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-10-02 14:30:21,667 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.CreateUserDto
+DEBUG 2018-10-02 14:30:21,668 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.UserDto
+DEBUG 2018-10-02 14:30:21,668 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-10-02 14:30:21,668 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-10-02 14:30:21,668 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.CreateRoleDto
+DEBUG 2018-10-02 14:30:21,668 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.PermissionDto
+DEBUG 2018-10-02 14:30:21,668 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.RoleDto
+DEBUG 2018-10-02 14:30:21,669 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-10-02 14:30:21,669 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.TenantDto
+INFO  2018-10-02 14:30:28,547 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-10-02 14:30:29,879 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Controllers.HomeController.Index (LTMCompanyNameFree.YoyoCmsTemplate.Web.Host)
+INFO  2018-10-02 14:30:30,172 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Controllers.HomeController.Index (LTMCompanyNameFree.YoyoCmsTemplate.Web.Host) - Validation state: Valid
+INFO  2018-10-02 14:30:30,178 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Controllers.HomeController.Index (LTMCompanyNameFree.YoyoCmsTemplate.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.5713ms.
+INFO  2018-10-02 14:30:30,593 [13   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-10-02 14:30:30,611 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Controllers.HomeController.Index (LTMCompanyNameFree.YoyoCmsTemplate.Web.Host) in 725.2051ms
+INFO  2018-10-02 14:30:30,692 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2153.0319ms 302 
+INFO  2018-10-02 14:30:30,693 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2018-10-02 14:30:30,704 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.7874ms 301 
+INFO  2018-10-02 14:30:30,710 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-10-02 14:30:30,746 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 36.3823ms 200 text/html
+INFO  2018-10-02 14:30:30,776 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-10-02 14:30:30,789 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2018-10-02 14:30:30,789 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-10-02 14:30:30,790 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-10-02 14:30:30,792 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2018-10-02 14:30:30,837 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'D:\CodeManager\Demos\LTMCompanyNameFree.YoyoCmsTemplate\src\aspnet-core\src\LTMCompanyNameFree.YoyoCmsTemplate.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2018-10-02 14:30:30,837 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.swagger.js'. Physical path: 'D:\CodeManager\Demos\LTMCompanyNameFree.YoyoCmsTemplate\src\aspnet-core\src\LTMCompanyNameFree.YoyoCmsTemplate.Web.Host\wwwroot\swagger\ui\abp.swagger.js'
+INFO  2018-10-02 14:30:30,838 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 45.7062ms 200 application/javascript
+INFO  2018-10-02 14:30:30,838 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 48.66ms 200 application/javascript
+INFO  2018-10-02 14:30:30,851 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2018-10-02 14:30:30,856 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2018-10-02 14:30:30,859 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 69.4741ms 200 application/javascript
+INFO  2018-10-02 14:30:30,859 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 83.6975ms 200 text/css
+INFO  2018-10-02 14:30:30,876 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2018-10-02 14:30:30,876 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 86.3866ms 200 application/javascript
+INFO  2018-10-02 14:30:31,605 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-10-02 14:30:31,609 [7    ] uthentication.JwtBearer.JwtBearerHandler - JwtBearer was not authenticated. Failure message: No SecurityTokenValidator available for token: null
+INFO  2018-10-02 14:30:31,676 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/favicon-32x32.png  
+INFO  2018-10-02 14:30:31,677 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2018-10-02 14:30:31,677 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3627ms 200 image/png
+INFO  2018-10-02 14:30:31,685 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/favicon-16x16.png  
+INFO  2018-10-02 14:30:31,686 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+INFO  2018-10-02 14:30:31,686 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6722ms 200 image/png
+INFO  2018-10-02 14:30:31,962 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 356.63ms 200 application/json;charset=utf-8
