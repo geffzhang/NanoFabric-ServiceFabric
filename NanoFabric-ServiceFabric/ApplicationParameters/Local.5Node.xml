@@ -2,6 +2,7 @@
 <Application xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="fabric:/NanoFabric_ServiceFabric" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
     <Parameter Name="ServiceUser_InstanceCount" Value="1" />
+    <Parameter Name="ServiceUser_InstanceCount" Value="1" />
     <Parameter Name="ServiceA_ASPNETCORE_ENVIRONMENT" Value="Development" />
     <Parameter Name="ServiceA_InstanceCount" Value="1" />
     <Parameter Name="NanoFabricGateway_ASPNETCORE_ENVIRONMENT" Value="Development" />
