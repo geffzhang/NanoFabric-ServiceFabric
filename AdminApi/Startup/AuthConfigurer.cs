@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Abp.Runtime.Security;
 using LTMCompanyNameFree.YoyoCmsTemplate;
+using Microsoft.AspNetCore.Builder;
 
 namespace AdminApi.Startup
 {
@@ -50,6 +51,16 @@ namespace AdminApi.Startup
                         OnMessageReceived = QueryStringTokenResolver
                     };
                 });
+            }// TODO:Add IdentiyServer Authentication
+            else if (bool.Parse(configuration["Authentication:IdentityServer4:IsEnabled"]))
+            {
+                services.AddAuthentication()
+                    .AddIdentityServerAuthentication("IdentityBearer", options =>
+                    {
+                        options.ApiName = configuration["Authentication:IdentityServer4:ApiName"];
+                        options.Authority = configuration["Authentication:IdentityServer4:Authority"];
+                        options.RequireHttpsMetadata = false;
+                    });
             }
         }
 
