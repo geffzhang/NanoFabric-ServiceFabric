@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="NanoFabric_ServiceFabricType" ApplicationTypeVersion="1.0.3" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="NanoFabric_ServiceFabricType" ApplicationTypeVersion="1.0.7" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
     <Parameter Name="SPAHost_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
     <Parameter Name="SPAHost_InstanceCount" DefaultValue="-1" />
@@ -16,14 +16,14 @@
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="SPAHostPkg" ServiceManifestVersion="1.0.2" />
+    <ServiceManifestRef ServiceManifestName="SPAHostPkg" ServiceManifestVersion="1.0.3" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[SPAHost_ASPNETCORE_ENVIRONMENT]" />
     </EnvironmentOverrides>
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="AbpHostPkg" ServiceManifestVersion="1.0.0" />
+    <ServiceManifestRef ServiceManifestName="AbpHostPkg" ServiceManifestVersion="1.0.6" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[AbpHost_ASPNETCORE_ENVIRONMENT]" />
@@ -44,7 +44,7 @@
     </EnvironmentOverrides>
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="ServiceOAuthPkg" ServiceManifestVersion="1.0.0" />
+    <ServiceManifestRef ServiceManifestName="ServiceOAuthPkg" ServiceManifestVersion="1.0.5" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[ServiceOAuth_ASPNETCORE_ENVIRONMENT]" />

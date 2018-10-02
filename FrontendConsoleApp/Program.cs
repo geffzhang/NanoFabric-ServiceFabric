@@ -10,9 +10,9 @@ namespace FrontendConsoleApp
         static string baseUrl = "http://127.0.0.1:8492";
         static void Main(string[] args)
         {
-            A();
+            //A();
             var tokenClient = new TokenClient($"{baseUrl}/serviceoauth/connect/token", "52abp", "secret");
-            var tokenResponse = tokenClient.RequestResourceOwnerPasswordAsync("bob@weyhd.com", "bob123!", "api1").ConfigureAwait(false)
+            var tokenResponse = tokenClient.RequestResourceOwnerPasswordAsync("admin", "123qwe", "api1").ConfigureAwait(false)
                 .GetAwaiter().GetResult();
 
             if (tokenResponse.IsError)

@@ -18,7 +18,17 @@ namespace ServiceOAuth.Configuration
                 new ApiResource("api1", "ServiceA api")
                 {
                     UserClaims = new List<string> { "City", "State" }
-                }
+                },
+                new ApiResource("52abp_admin_api", "52Abp Admin Admin")
+            };
+        }
+
+        public static IEnumerable<IdentityResource> IdentityResources()
+        {
+            return new List<IdentityResource>
+            {
+                new IdentityResources.OpenId(),            
+                new IdentityResources.Profile()
             };
         }
 
@@ -33,7 +43,8 @@ namespace ServiceOAuth.Configuration
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     AccessTokenType = AccessTokenType.Jwt,
                     AllowedScopes = {
-                        "api1"
+                        "api1",
+                        "52abp_admin_api"
                     },
                     AlwaysSendClientClaims = true
                 }
@@ -47,8 +58,8 @@ namespace ServiceOAuth.Configuration
                 new TestUser
                 {
                     SubjectId = "1",
-                    Username = "bob@weyhd.com",
-                    Password = "bob123!",
+                    Username = "admin",
+                    Password = "123qwe",
                     Claims = new List<Claim>
                     {
                         new Claim("City", "Shenzhen"),

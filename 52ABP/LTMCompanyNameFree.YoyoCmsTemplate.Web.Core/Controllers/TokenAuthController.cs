@@ -17,6 +17,7 @@ using LTMCompanyNameFree.YoyoCmsTemplate.Authorization;
 using LTMCompanyNameFree.YoyoCmsTemplate.Authorization.Users;
 using LTMCompanyNameFree.YoyoCmsTemplate.Models.TokenAuth;
 using LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy;
+using IdentityModel.Client;
 
 namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
 {
@@ -48,25 +49,44 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
             _externalAuthManager = externalAuthManager;
             _userRegistrationManager = userRegistrationManager;
         }
-
+        static string baseUrl = "http://127.0.0.1:8492";
         [HttpPost]
         public async Task<AuthenticateResultModel> Authenticate([FromBody] AuthenticateModel model)
         {
-            var loginResult = await GetLoginResultAsync(
-                model.UserNameOrEmailAddress,
-                model.Password,
-                GetTenancyNameOrNull()
-            );
+            var tokenClient = new TokenClient($"{baseUrl}/serviceoauth/connect/token", "52abp", "secret");
+            var tokenResponse = tokenClient.RequestResourceOwnerPasswordAsync("admin", "123qwe")
+                .ConfigureAwait(false)
+                .GetAwaiter().GetResult();
 
-            var accessToken = CreateAccessToken(CreateJwtClaims(loginResult.Identity));
+            if (tokenResponse.IsError)
+            {
+                throw new UserFriendlyException(tokenResponse.Error);
+            }
 
             return new AuthenticateResultModel
             {
-                AccessToken = accessToken,
-                EncryptedAccessToken = GetEncrpyedAccessToken(accessToken),
+                AccessToken = tokenResponse.AccessToken,
+                EncryptedAccessToken = GetEncrpyedAccessToken(tokenResponse.AccessToken),
                 ExpireInSeconds = (int)_configuration.Expiration.TotalSeconds,
-                UserId = loginResult.User.Id
+                UserId = 1
             };
+
+            return null;
+            //var loginResult = await GetLoginResultAsync(
+            //    model.UserNameOrEmailAddress,
+            //    model.Password,
+            //    GetTenancyNameOrNull()
+            //);
+
+            //var accessToken = CreateAccessToken(CreateJwtClaims(loginResult.Identity));
+
+            //return new AuthenticateResultModel
+            //{
+            //    AccessToken = accessToken,
+            //    EncryptedAccessToken = GetEncrpyedAccessToken(accessToken),
+            //    ExpireInSeconds = (int)_configuration.Expiration.TotalSeconds,
+            //    UserId = loginResult.User.Id
+            //};
         }
 
         [HttpGet]

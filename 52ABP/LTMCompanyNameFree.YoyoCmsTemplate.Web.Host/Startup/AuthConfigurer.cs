@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Abp.Runtime.Security;
+using Microsoft.AspNetCore.Builder;
 
 namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
 {
@@ -16,7 +17,8 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
         {
             if (bool.Parse(configuration["Authentication:JwtBearer:IsEnabled"]))
             {
-                services.AddAuthentication(options => {
+                services.AddAuthentication(options =>
+                {
                     options.DefaultAuthenticateScheme = "JwtBearer";
                     options.DefaultChallengeScheme = "JwtBearer";
                 }).AddJwtBearer("JwtBearer", options =>
@@ -49,6 +51,18 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
                         OnMessageReceived = QueryStringTokenResolver
                     };
                 });
+
+
+            } // TODO:Add IdentiyServer Authentication
+            else if (bool.Parse(configuration["Authentication:IdentityServer4:IsEnabled"]))
+            {
+                services.AddAuthentication()
+                    .AddIdentityServerAuthentication("IdentityBearer", options =>
+                    {
+                        options.ApiName = configuration["Authentication:IdentityServer4:ApiName"];
+                        options.Authority = configuration["Authentication:IdentityServer4:Authority"];
+                        options.RequireHttpsMetadata = false;
+                    });
             }
         }
 
