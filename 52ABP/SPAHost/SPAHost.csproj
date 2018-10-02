@@ -40,10 +40,6 @@
   <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <!-- use yarn or npm restore packages -->
-    <Exec WorkingDirectory="$(SpaRoot)" Command="yarn" />
-    <!--<Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />-->
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod --build-optimizer" />
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod --build-optimizer" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
 
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>

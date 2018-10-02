@@ -17,7 +17,6 @@ using LTMCompanyNameFree.YoyoCmsTemplate.Configuration;
 using LTMCompanyNameFree.YoyoCmsTemplate.Identity;
 
 using Abp.AspNetCore.SignalR.Hubs;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
 
 namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
 {
@@ -83,11 +82,6 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
                 options.OperationFilter<SecurityRequirementsOperationFilter>();
             });
 
-            // In production, the Angular files will be served from this directory
-            services.AddSpaStaticFiles(configuration =>
-            {
-                configuration.RootPath = "ClientApp/dist";
-            });
 
             // Configure Abp and Dependency Injection
             return services.AddAbp<YoyoCmsTemplateWebHostModule>(
@@ -106,9 +100,6 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
 
             app.UseStaticFiles();
 
-            // Use SPA Static Files
-            app.UseSpaStaticFiles();
-
 
             app.UseAuthentication();
 
@@ -125,21 +116,6 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
                 routes.MapRoute(
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
-            });
-
-            // Use SPA Static Files
-            app.UseSpa(spa =>
-            {
-                // To learn more about options for serving an Angular SPA from ASP.NET Core,
-                // see https://go.microsoft.com/fwlink/?linkid=864501
-
-                spa.Options.SourcePath = "ClientApp";
-
-                // If development mode use npm start
-                if (env.IsDevelopment())
-                {
-                    spa.UseAngularCliServer(npmScript: "start");
-                }
             });
 
             // Enable middleware to serve generated Swagger as a JSON endpoint
