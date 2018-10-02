@@ -29,27 +29,27 @@
       "ServiceName": "NanoFabric_ServiceFabric/ServiceOAuth",
       "UseServiceDiscovery": true
     },
-    {
-      "DownstreamPathTemplate": "/api/{route}",
-      "UpstreamPathTemplate": "/api/{url}",
-      "UpstreamHttpMethod": [ "Get", "Options", "Post","Delete","Put" ],
-      "DownstreamScheme": "http",
-      "ServiceName": "NanoFabric_ServiceFabric/AdminApi",
-      "UseServiceDiscovery": true,
-      //"AuthenticationOptions": {
-      //  "AuthenticationProviderKey": "apikey",
-      //  "AllowedScopes": []
-      //},
-      //"AddHeadersToRequest": {
-      //  "claims_City": "Claims[City] > value > |",
-      //  "claims_State": "Claims[State] > value > |"
-      //},
-      //"QoSOptions": {
-      //  "ExceptionsAllowedBeforeBreaking": 3,
-      //  "DurationOfBreak": 10,
-      //  "TimeoutValue": 5000
-      //}
-    }
+    //{
+    //  "DownstreamPathTemplate": "/api/{route}",
+    //  "UpstreamPathTemplate": "/api/{url}",
+    //  "UpstreamHttpMethod": [ "Get", "Options", "Post","Delete","Put" ],
+    //  "DownstreamScheme": "http",
+    //  "ServiceName": "NanoFabric_ServiceFabric/AdminApi",
+    //  "UseServiceDiscovery": true,
+    //  //"AuthenticationOptions": {
+    //  //  "AuthenticationProviderKey": "apikey",
+    //  //  "AllowedScopes": []
+    //  //},
+    //  //"AddHeadersToRequest": {
+    //  //  "claims_City": "Claims[City] > value > |",
+    //  //  "claims_State": "Claims[State] > value > |"
+    //  //},
+    //  //"QoSOptions": {
+    //  //  "ExceptionsAllowedBeforeBreaking": 3,
+    //  //  "DurationOfBreak": 10,
+    //  //  "TimeoutValue": 5000
+    //  //}
+    //}
     //{
     //  "DownstreamPathTemplate": "/{route}",
     //  "UpstreamPathTemplate": "/adminapi/{route}",
