@@ -32,8 +32,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AdminApi\AdminApi.csproj" />
-    <ProjectReference Include="..\AdminUI\AdminUI.csproj" />
     <ProjectReference Include="..\Gateway\Gateway.csproj" />
     <ProjectReference Include="..\ServiceA\ServiceA.csproj" />
     <ProjectReference Include="..\ServiceOAuth\ServiceOAuth.csproj" />

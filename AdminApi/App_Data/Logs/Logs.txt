@@ -1,0 +1,341 @@
+DEBUG 2018-10-02 14:56:56,854 [13   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-10-02 14:56:56,948 [13   ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-10-02 14:56:56,972 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: AdminApi.Startup.YoyoCmsTemplateWebHostModule, AdminApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,976 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,976 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateApplicationModule, LTMCompanyNameFree.YoyoCmsTemplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,977 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,977 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,977 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,978 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,978 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,979 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateEntityFrameworkModule, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,979 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,980 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,980 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,981 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,981 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,981 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:56,985 [13   ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-10-02 14:56:57,095 [13   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:56:57,095 [13   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:56:57,095 [13   ] o.Configuration.LanguageManagementConfig - Converted YoyoCmsTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:56:57,095 [13   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 14:56:57,646 [13   ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateDbContext, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 14:56:58,154 [13   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-10-02 14:56:58,232 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-10-02 14:56:58,288 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-10-02 14:56:58,334 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: YoyoCmsTemplate
+DEBUG 2018-10-02 14:56:58,376 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-10-02 14:56:58,420 [13   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-10-02 14:56:58,511 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-10-02 14:56:58,511 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-10-02 14:56:58,520 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.CreateUserDto
+DEBUG 2018-10-02 14:56:58,521 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.UserDto
+DEBUG 2018-10-02 14:56:58,521 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-10-02 14:56:58,521 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-10-02 14:56:58,521 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.CreateRoleDto
+DEBUG 2018-10-02 14:56:58,521 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.PermissionDto
+DEBUG 2018-10-02 14:56:58,521 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.RoleDto
+DEBUG 2018-10-02 14:56:58,522 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-10-02 14:56:58,522 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.TenantDto
+DEBUG 2018-10-02 15:01:11,154 [13   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-10-02 15:01:11,179 [13   ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-10-02 15:01:11,197 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: AdminApi.Startup.YoyoCmsTemplateWebHostModule, AdminApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,200 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,200 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateApplicationModule, LTMCompanyNameFree.YoyoCmsTemplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,201 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,201 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,201 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,202 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,202 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,203 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateEntityFrameworkModule, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,203 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,203 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,204 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,204 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,204 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,205 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,208 [13   ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-10-02 15:01:11,285 [13   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:01:11,285 [13   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:01:11,285 [13   ] o.Configuration.LanguageManagementConfig - Converted YoyoCmsTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:01:11,285 [13   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:01:11,545 [13   ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateDbContext, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:01:11,967 [13   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-10-02 15:01:12,033 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-10-02 15:01:12,085 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-10-02 15:01:12,122 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: YoyoCmsTemplate
+DEBUG 2018-10-02 15:01:12,158 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-10-02 15:01:12,199 [13   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-10-02 15:01:12,263 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-10-02 15:01:12,263 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-10-02 15:01:12,267 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.CreateUserDto
+DEBUG 2018-10-02 15:01:12,268 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.UserDto
+DEBUG 2018-10-02 15:01:12,268 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-10-02 15:01:12,268 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-10-02 15:01:12,268 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.CreateRoleDto
+DEBUG 2018-10-02 15:01:12,269 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.PermissionDto
+DEBUG 2018-10-02 15:01:12,269 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.RoleDto
+DEBUG 2018-10-02 15:01:12,269 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-10-02 15:01:12,270 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.TenantDto
+DEBUG 2018-10-02 15:15:38,628 [12   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-10-02 15:15:38,680 [12   ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-10-02 15:15:38,711 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: AdminApi.Startup.YoyoCmsTemplateWebHostModule, AdminApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,717 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,718 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateApplicationModule, LTMCompanyNameFree.YoyoCmsTemplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,719 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,720 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,720 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,721 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,723 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,724 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateEntityFrameworkModule, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,725 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,725 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,726 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,727 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,728 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,729 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:38,736 [12   ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-10-02 15:15:38,851 [12   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:15:38,851 [12   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:15:38,851 [12   ] o.Configuration.LanguageManagementConfig - Converted YoyoCmsTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:15:38,852 [12   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:15:39,389 [12   ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateDbContext, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:15:40,186 [12   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-10-02 15:15:40,328 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-10-02 15:15:40,432 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-10-02 15:15:40,506 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: YoyoCmsTemplate
+DEBUG 2018-10-02 15:15:40,576 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-10-02 15:15:40,649 [12   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-10-02 15:15:40,746 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-10-02 15:15:40,746 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-10-02 15:15:40,754 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.CreateUserDto
+DEBUG 2018-10-02 15:15:40,755 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.UserDto
+DEBUG 2018-10-02 15:15:40,755 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-10-02 15:15:40,755 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-10-02 15:15:40,756 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.CreateRoleDto
+DEBUG 2018-10-02 15:15:40,756 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.PermissionDto
+DEBUG 2018-10-02 15:15:40,756 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.RoleDto
+DEBUG 2018-10-02 15:15:40,757 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-10-02 15:15:40,757 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.TenantDto
+INFO  2018-10-02 15:16:12,004 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://xiaomi_pc_pro:7411/488cd93c-f08a-4c62-bd85-6d274b7046ae/131829370021179386/2fca475d-48df-428e-9ff3-63368aa00fd1  
+INFO  2018-10-02 15:16:14,144 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action AdminApi.Controllers.HomeController.Index (AdminApi)
+INFO  2018-10-02 15:16:14,688 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method AdminApi.Controllers.HomeController.Index (AdminApi) - Validation state: Valid
+INFO  2018-10-02 15:16:14,696 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method AdminApi.Controllers.HomeController.Index (AdminApi), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.8446ms.
+INFO  2018-10-02 15:16:15,258 [30   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-10-02 15:16:15,288 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action AdminApi.Controllers.HomeController.Index (AdminApi) in 1134.971ms
+INFO  2018-10-02 15:16:15,422 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3426.6634ms 302 
+INFO  2018-10-02 15:16:15,423 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://xiaomi_pc_pro:7411/swagger  
+INFO  2018-10-02 15:16:15,425 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.1864ms 410 
+DEBUG 2018-10-02 15:21:15,828 [11   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-10-02 15:21:15,831 [11   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-10-02 15:21:15,836 [11   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-10-02 15:21:15,836 [11   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-10-02 15:28:15,348 [13   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-10-02 15:28:15,451 [13   ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-10-02 15:28:15,482 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: AdminApi.Startup.YoyoCmsTemplateWebHostModule, AdminApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,488 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,489 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateApplicationModule, LTMCompanyNameFree.YoyoCmsTemplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,490 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,490 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,491 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,491 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,492 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,493 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateEntityFrameworkModule, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,494 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,494 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,495 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,495 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,496 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,496 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:15,503 [13   ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-10-02 15:28:15,618 [13   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:28:15,619 [13   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:28:15,619 [13   ] o.Configuration.LanguageManagementConfig - Converted YoyoCmsTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:28:15,619 [13   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:28:16,060 [13   ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateDbContext, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:28:16,600 [13   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-10-02 15:28:16,678 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-10-02 15:28:16,732 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-10-02 15:28:16,769 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: YoyoCmsTemplate
+DEBUG 2018-10-02 15:28:16,803 [13   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-10-02 15:28:16,841 [13   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-10-02 15:28:16,908 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-10-02 15:28:16,908 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-10-02 15:28:16,912 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.CreateUserDto
+DEBUG 2018-10-02 15:28:16,913 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.UserDto
+DEBUG 2018-10-02 15:28:16,913 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-10-02 15:28:16,913 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-10-02 15:28:16,913 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.CreateRoleDto
+DEBUG 2018-10-02 15:28:16,913 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.PermissionDto
+DEBUG 2018-10-02 15:28:16,913 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.RoleDto
+DEBUG 2018-10-02 15:28:16,914 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-10-02 15:28:16,914 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.TenantDto
+DEBUG 2018-10-02 15:34:43,566 [18   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-10-02 15:34:43,604 [18   ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-10-02 15:34:43,625 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: AdminApi.Startup.YoyoCmsTemplateWebHostModule, AdminApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,629 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,630 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateApplicationModule, LTMCompanyNameFree.YoyoCmsTemplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,631 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,631 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,631 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,632 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,633 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,633 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateEntityFrameworkModule, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,634 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,634 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,634 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,635 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,635 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,635 [18   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:43,639 [18   ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-10-02 15:34:43,709 [18   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:34:43,709 [18   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:34:43,709 [18   ] o.Configuration.LanguageManagementConfig - Converted YoyoCmsTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:34:43,709 [18   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:34:43,982 [18   ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateDbContext, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:34:44,472 [18   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-10-02 15:34:44,544 [18   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-10-02 15:34:44,599 [18   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-10-02 15:34:44,650 [18   ] Abp.Localization.LocalizationManager     - Initialized localization source: YoyoCmsTemplate
+DEBUG 2018-10-02 15:34:44,719 [18   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-10-02 15:34:44,755 [18   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-10-02 15:34:44,805 [18   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-10-02 15:34:44,805 [18   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-10-02 15:34:44,809 [18   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.CreateUserDto
+DEBUG 2018-10-02 15:34:44,810 [18   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.UserDto
+DEBUG 2018-10-02 15:34:44,810 [18   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-10-02 15:34:44,810 [18   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-10-02 15:34:44,811 [18   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.CreateRoleDto
+DEBUG 2018-10-02 15:34:44,811 [18   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.PermissionDto
+DEBUG 2018-10-02 15:34:44,811 [18   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.RoleDto
+DEBUG 2018-10-02 15:34:44,811 [18   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-10-02 15:34:44,812 [18   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.TenantDto
+INFO  2018-10-02 15:36:02,257 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://xiaomi_pc_pro:9418/swagger/index.html  
+INFO  2018-10-02 15:36:02,305 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.9785ms 410 
+INFO  2018-10-02 15:36:06,710 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://xiaomi_pc_pro:9418/  
+INFO  2018-10-02 15:36:06,711 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.4256ms 410 
+INFO  2018-10-02 15:36:15,030 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:9418/  
+INFO  2018-10-02 15:36:15,030 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.2405ms 410 
+INFO  2018-10-02 15:36:22,857 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:9418/swagger/index.html  
+INFO  2018-10-02 15:36:22,857 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.2323ms 410 
+DEBUG 2018-10-02 15:38:34,631 [11   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-10-02 15:38:34,662 [11   ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-10-02 15:38:34,682 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: AdminApi.Startup.YoyoCmsTemplateWebHostModule, AdminApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,685 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,686 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateApplicationModule, LTMCompanyNameFree.YoyoCmsTemplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,687 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,687 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,687 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,688 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,689 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,689 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateEntityFrameworkModule, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,690 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,690 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,691 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,691 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,691 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,692 [11   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:34,696 [11   ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-10-02 15:38:34,780 [11   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:38:34,780 [11   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:38:34,780 [11   ] o.Configuration.LanguageManagementConfig - Converted YoyoCmsTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:38:34,780 [11   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:38:35,070 [11   ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateDbContext, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:38:35,475 [11   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-10-02 15:38:35,543 [11   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-10-02 15:38:35,591 [11   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-10-02 15:38:35,624 [11   ] Abp.Localization.LocalizationManager     - Initialized localization source: YoyoCmsTemplate
+DEBUG 2018-10-02 15:38:35,659 [11   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-10-02 15:38:35,700 [11   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-10-02 15:38:35,775 [11   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-10-02 15:38:35,776 [11   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-10-02 15:38:35,780 [11   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.CreateUserDto
+DEBUG 2018-10-02 15:38:35,781 [11   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.UserDto
+DEBUG 2018-10-02 15:38:35,781 [11   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-10-02 15:38:35,782 [11   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-10-02 15:38:35,782 [11   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.CreateRoleDto
+DEBUG 2018-10-02 15:38:35,782 [11   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.PermissionDto
+DEBUG 2018-10-02 15:38:35,782 [11   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.RoleDto
+DEBUG 2018-10-02 15:38:35,783 [11   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-10-02 15:38:35,783 [11   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.TenantDto
+DEBUG 2018-10-02 15:42:48,445 [12   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-10-02 15:42:48,485 [12   ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-10-02 15:42:48,507 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: AdminApi.Startup.YoyoCmsTemplateWebHostModule, AdminApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,512 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,513 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateApplicationModule, LTMCompanyNameFree.YoyoCmsTemplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,513 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,514 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,514 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,514 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,515 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,516 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateEntityFrameworkModule, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,516 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,516 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,517 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,517 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,517 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,518 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:48,522 [12   ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-10-02 15:42:48,602 [12   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:42:48,602 [12   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:42:48,602 [12   ] o.Configuration.LanguageManagementConfig - Converted YoyoCmsTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:42:48,602 [12   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:42:48,948 [12   ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateDbContext, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:42:49,549 [12   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-10-02 15:42:49,689 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-10-02 15:42:49,789 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-10-02 15:42:49,866 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: YoyoCmsTemplate
+DEBUG 2018-10-02 15:42:49,949 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-10-02 15:42:50,017 [12   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-10-02 15:42:50,095 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-10-02 15:42:50,095 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-10-02 15:42:50,101 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.CreateUserDto
+DEBUG 2018-10-02 15:42:50,102 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.UserDto
+DEBUG 2018-10-02 15:42:50,102 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-10-02 15:42:50,102 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-10-02 15:42:50,102 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.CreateRoleDto
+DEBUG 2018-10-02 15:42:50,103 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.PermissionDto
+DEBUG 2018-10-02 15:42:50,103 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.RoleDto
+DEBUG 2018-10-02 15:42:50,104 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-10-02 15:42:50,104 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.TenantDto
+DEBUG 2018-10-02 15:48:40,634 [12   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-10-02 15:48:40,752 [12   ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-10-02 15:48:40,779 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: AdminApi.Startup.YoyoCmsTemplateWebHostModule, AdminApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,786 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateWebCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,787 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateApplicationModule, LTMCompanyNameFree.YoyoCmsTemplate.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,787 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.YoyoCmsTemplateCoreModule, LTMCompanyNameFree.YoyoCmsTemplate.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,788 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,788 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,789 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,790 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,791 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateEntityFrameworkModule, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,791 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,792 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,792 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,793 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,794 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,794 [12   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:40,799 [12   ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-10-02 15:48:40,886 [12   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:48:40,887 [12   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:48:40,887 [12   ] o.Configuration.LanguageManagementConfig - Converted YoyoCmsTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:48:40,887 [12   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-10-02 15:48:41,356 [12   ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore.YoyoCmsTemplateDbContext, LTMCompanyNameFree.YoyoCmsTemplate.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-10-02 15:48:41,959 [12   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-10-02 15:48:42,067 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-10-02 15:48:42,141 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-10-02 15:48:42,195 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: YoyoCmsTemplate
+DEBUG 2018-10-02 15:48:42,242 [12   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-10-02 15:48:42,289 [12   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-10-02 15:48:42,374 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-10-02 15:48:42,374 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-10-02 15:48:42,380 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.CreateUserDto
+DEBUG 2018-10-02 15:48:42,381 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Users.Dto.UserDto
+DEBUG 2018-10-02 15:48:42,381 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-10-02 15:48:42,381 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-10-02 15:48:42,381 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.CreateRoleDto
+DEBUG 2018-10-02 15:48:42,381 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.PermissionDto
+DEBUG 2018-10-02 15:48:42,381 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.Roles.Dto.RoleDto
+DEBUG 2018-10-02 15:48:42,382 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-10-02 15:48:42,382 [12   ] Abp.AutoMapper.AbpAutoMapperModule       - LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy.Dto.TenantDto

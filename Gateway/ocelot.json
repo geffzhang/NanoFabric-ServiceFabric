@@ -30,21 +30,29 @@
       "UseServiceDiscovery": true
     },
     {
-      "DownstreamPathTemplate": "/{route}",
-      "UpstreamPathTemplate": "/{route}",
-      "UpstreamHttpMethod": [ "Get", "Options", "Post" ],
+      "DownstreamPathTemplate": "/api/{route}",
+      "UpstreamPathTemplate": "/api/{route}",
+      "UpstreamHttpMethod": [ "Get", "Options", "Post", "Delete", "Put" ],
       "DownstreamScheme": "http",
       "ServiceName": "NanoFabric_ServiceFabric/AdminApi",
       "UseServiceDiscovery": true
-    },
-    {
-      "DownstreamPathTemplate": "/{route}",
-      "UpstreamPathTemplate": "/{route}",
-      "UpstreamHttpMethod": [ "Get", "Options", "Post" ],
-      "DownstreamScheme": "http",
-      "ServiceName": "NanoFabric_ServiceFabric/AdminUI",
-      "UseServiceDiscovery": true
     }
+    //{
+    //  "DownstreamPathTemplate": "/{route}",
+    //  "UpstreamPathTemplate": "/adminapi/{route}",
+    //  "UpstreamHttpMethod": [ "Get", "Options", "Post" ],
+    //  "DownstreamScheme": "http",
+    //  "ServiceName": "NanoFabric_ServiceFabric/AdminApi",
+    //  "UseServiceDiscovery": true
+    //},
+    //{
+    //  "DownstreamPathTemplate": "/{route}",
+    //  "UpstreamPathTemplate": "/admin/{route}",
+    //  "UpstreamHttpMethod": [ "Get", "Options", "Post" ],
+    //  "DownstreamScheme": "http",
+    //  "ServiceName": "NanoFabric_ServiceFabric/AdminUI",
+    //  "UseServiceDiscovery": true
+    //}
   ],
   "GlobalConfiguration": {
     "RequestIdKey": "OcRequestId",
