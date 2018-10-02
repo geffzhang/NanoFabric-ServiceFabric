@@ -46,7 +46,8 @@ export class AppPreBootstrap {
         },
       })
       .done(result => {
-        AppConsts.appBaseUrl = result.appBaseUrl;
+        AppConsts.appBaseUrl = window.location.protocol + '//' + window.location.host; // result.appBaseUrl;
+        // AppConsts.appBaseUrl = result.appBaseUrl;
         AppConsts.remoteServiceBaseUrl = result.remoteServiceBaseUrl;
         LocalizationService.localizationSourceName = AppConsts.localization.defaultLocalizationSourceName;
         callback();

@@ -1,9 +1,8 @@
 {
-  "ReRoutes": [
-    {
+  "ReRoutes": [{
       "DownstreamPathTemplate": "/api/values",
       "UpstreamPathTemplate": "/servicea/api/values",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": ["Get"],
       "DownstreamScheme": "http",
       "ServiceName": "NanoFabric_ServiceFabric/ServiceA",
       "UseServiceDiscovery": true,
@@ -24,17 +23,17 @@
     {
       "DownstreamPathTemplate": "/{route}",
       "UpstreamPathTemplate": "/serviceoauth/{route}",
-      "UpstreamHttpMethod": [ "Get", "Options", "Post" ],
+      "UpstreamHttpMethod": ["Get", "Options", "Post"],
       "DownstreamScheme": "http",
       "ServiceName": "NanoFabric_ServiceFabric/ServiceOAuth",
       "UseServiceDiscovery": true
     },
     { // admin apis
-      "ServiceName": "NanoFabric_ServiceFabric/AbpHost",
+      "ServiceName": "NanoFabric_ServiceFabric/ABPHost",
       "DownstreamPathTemplate": "/{route}",
       "DownstreamScheme": "http",
       "UpstreamPathTemplate": "/test/{route}",
-      "UpstreamHttpMethod": [ "Options", "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": ["Options", "Get", "Post", "Delete", "Put"],
       "UseServiceDiscovery": true
     }
   ],
