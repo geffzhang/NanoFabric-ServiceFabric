@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="NanoFabric_ServiceFabricType" ApplicationTypeVersion="1.0.1" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
-    <Parameter Name="AdminApi_MinReplicaSetSize" DefaultValue="3" />
-    <Parameter Name="AdminApi_PartitionCount" DefaultValue="1" />
-    <Parameter Name="AdminApi_TargetReplicaSetSize" DefaultValue="3" />
-    <Parameter Name="AdminUI_InstanceCount" DefaultValue="-1" />
     <Parameter Name="ServiceA_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
     <Parameter Name="ServiceA_InstanceCount" DefaultValue="2" />
     <Parameter Name="NanoFabricGateway_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
@@ -15,14 +11,6 @@
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
-  <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="AdminApiPkg" ServiceManifestVersion="1.0.1" />
-    <ConfigOverrides />
-  </ServiceManifestImport>
-  <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="AdminUIPkg" ServiceManifestVersion="1.0.0" />
-    <ConfigOverrides />
-  </ServiceManifestImport>
   <ServiceManifestImport>
     <ServiceManifestRef ServiceManifestName="ServiceAPkg" ServiceManifestVersion="1.0.0" />
     <ConfigOverrides />
