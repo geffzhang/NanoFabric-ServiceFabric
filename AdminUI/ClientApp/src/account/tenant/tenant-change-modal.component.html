@@ -1,0 +1,37 @@
+﻿<form nz-form #changeTenantForm="ngForm" (ngSubmit)="save()">
+  <div class="modal-header">
+    <div class="modal-title">
+      <i class="anticon anticon-home"></i> {{l("ChangeTenant")}}
+    </div>
+  </div>
+
+
+  <fieldset>
+    <nz-form-item nz-row>
+      <nz-form-label nz-col [nzSm]="4" nzFor="TenancyName">
+        {{l("TenancyName")}}
+      </nz-form-label>
+      <nz-form-control nz-col [nzSm]="20">
+        <nz-input-group nzPrefixIcon="anticon anticon-home">
+          <input nz-input name="TenancyName" [(ngModel)]="tenancyName" type="text" [placeholder]="l('TenancyName')" [nzSize]="'large'"
+          />
+        </nz-input-group>
+        <span class="text-sm text-grey">{{l("LeaveEmptyToSwitchToHost")}}</span>
+
+      </nz-form-control>
+    </nz-form-item>
+  </fieldset>
+
+  <div class="modal-footer">
+    <button nz-button [nzType]="'default'" [nzSize]="'large'" type="button" (click)="close()" [disabled]="saving">
+      <i class="anticon anticon-close-circle-o"></i> {{l("Cancel")}}
+    </button>
+    <button nz-button [nzType]="'primary'" [nzSize]="'large'" type="submit" [disabled]="!changeTenantForm.form.valid" [disabled]="saving"
+      [nzLoading]="saving">
+      <i class="anticon anticon-save"></i> {{l("Save")}}
+    </button>
+  </div>
+
+
+
+</form>
