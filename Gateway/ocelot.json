@@ -3,7 +3,7 @@
     {
       "DownstreamPathTemplate": "/api/values",
       "UpstreamPathTemplate": "/servicea/api/values",
-      "UpstreamHttpMethod": [ "Get"],
+      "UpstreamHttpMethod": [ "Get" ],
       "DownstreamScheme": "http",
       "ServiceName": "NanoFabric_ServiceFabric/ServiceA",
       "UseServiceDiscovery": true,
@@ -27,6 +27,22 @@
       "UpstreamHttpMethod": [ "Get", "Options", "Post" ],
       "DownstreamScheme": "http",
       "ServiceName": "NanoFabric_ServiceFabric/ServiceOAuth",
+      "UseServiceDiscovery": true
+    },
+    {
+      "DownstreamPathTemplate": "/{route}",
+      "UpstreamPathTemplate": "/{route}",
+      "UpstreamHttpMethod": [ "Get", "Options", "Post" ],
+      "DownstreamScheme": "http",
+      "ServiceName": "NanoFabric_ServiceFabric/AdminApi",
+      "UseServiceDiscovery": true
+    },
+    {
+      "DownstreamPathTemplate": "/{route}",
+      "UpstreamPathTemplate": "/{route}",
+      "UpstreamHttpMethod": [ "Get", "Options", "Post" ],
+      "DownstreamScheme": "http",
+      "ServiceName": "NanoFabric_ServiceFabric/AdminUI",
       "UseServiceDiscovery": true
     }
   ],
