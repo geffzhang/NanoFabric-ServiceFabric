@@ -12,7 +12,7 @@ namespace FrontendConsoleApp
         {
             //A();
             var tokenClient = new TokenClient($"{baseUrl}/serviceoauth/connect/token", "52abp", "secret");
-            var tokenResponse = tokenClient.RequestResourceOwnerPasswordAsync("admin", "123qwe", "api1").ConfigureAwait(false)
+            var tokenResponse = tokenClient.RequestResourceOwnerPasswordAsync("admin", "123qwe").ConfigureAwait(false)
                 .GetAwaiter().GetResult();
 
             if (tokenResponse.IsError)

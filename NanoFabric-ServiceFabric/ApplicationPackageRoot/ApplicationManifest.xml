@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="NanoFabric_ServiceFabricType" ApplicationTypeVersion="1.0.7" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="NanoFabric_ServiceFabricType" ApplicationTypeVersion="1.0.10" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
     <Parameter Name="SPAHost_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
     <Parameter Name="SPAHost_InstanceCount" DefaultValue="-1" />
@@ -23,7 +23,7 @@
     </EnvironmentOverrides>
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="AbpHostPkg" ServiceManifestVersion="1.0.6" />
+    <ServiceManifestRef ServiceManifestName="AbpHostPkg" ServiceManifestVersion="1.0.9" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[AbpHost_ASPNETCORE_ENVIRONMENT]" />
@@ -44,7 +44,7 @@
     </EnvironmentOverrides>
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="ServiceOAuthPkg" ServiceManifestVersion="1.0.5" />
+    <ServiceManifestRef ServiceManifestName="ServiceOAuthPkg" ServiceManifestVersion="1.0.8" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[ServiceOAuth_ASPNETCORE_ENVIRONMENT]" />

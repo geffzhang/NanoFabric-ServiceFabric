@@ -49,11 +49,11 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
             _externalAuthManager = externalAuthManager;
             _userRegistrationManager = userRegistrationManager;
         }
-        static string baseUrl = "http://127.0.0.1:8492";
+        static string baseUrl = "http://localhost:8492";
         [HttpPost]
         public async Task<AuthenticateResultModel> Authenticate([FromBody] AuthenticateModel model)
         {
-            var tokenClient = new TokenClient($"{baseUrl}/serviceoauth/connect/token", "52abp", "secret");
+            var tokenClient = new TokenClient($"http://localhost:8720/connect/token", "client", "secret");
             var tokenResponse = tokenClient.RequestResourceOwnerPasswordAsync("admin", "123qwe")
                 .ConfigureAwait(false)
                 .GetAwaiter().GetResult();

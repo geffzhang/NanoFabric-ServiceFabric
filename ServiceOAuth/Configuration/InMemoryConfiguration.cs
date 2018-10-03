@@ -19,7 +19,7 @@ namespace ServiceOAuth.Configuration
                 {
                     UserClaims = new List<string> { "City", "State" }
                 },
-                new ApiResource("52abp_admin_api", "52Abp Admin Admin")
+                new ApiResource("default-api", "Default (all) API")
             };
         }
 
@@ -27,8 +27,10 @@ namespace ServiceOAuth.Configuration
         {
             return new List<IdentityResource>
             {
-                new IdentityResources.OpenId(),            
-                new IdentityResources.Profile()
+                new IdentityResources.OpenId(),
+                new IdentityResources.Profile(),
+                new IdentityResources.Email(),
+                new IdentityResources.Phone()
             };
         }
 
@@ -43,30 +45,39 @@ namespace ServiceOAuth.Configuration
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     AccessTokenType = AccessTokenType.Jwt,
                     AllowedScopes = {
-                        "api1",
-                        "52abp_admin_api"
+                        "api1"
                     },
                     AlwaysSendClientClaims = true
-                }
-            };
-        }
-
-        public static IEnumerable<TestUser> Users()
-        {
-            return new[]
-            {  
-                new TestUser
+                },
+                 new Client
                 {
-                    SubjectId = "1",
-                    Username = "admin",
-                    Password = "123qwe",
-                    Claims = new List<Claim>
+                    ClientId = "client",
+                    AllowedGrantTypes = GrantTypes.ClientCredentials.Union  (GrantTypes.ResourceOwnerPassword).ToList(),
+                    AllowedScopes = {"default-api"},
+                    ClientSecrets =
                     {
-                        new Claim("City", "Shenzhen"),
-                        new Claim("State", "Guangdong")
+                        new Secret("secret".Sha256())
                     }
                 }
             };
         }
+
+        //public static IEnumerable<TestUser> Users()
+        //{
+        //    return new[]
+        //    {
+        //        new TestUser
+        //        {
+        //            SubjectId = "1",
+        //            Username = "admin",
+        //            Password = "123qwe",
+        //            Claims = new List<Claim>
+        //            {
+        //                new Claim("City", "Shenzhen"),
+        //                new Claim("State", "Guangdong")
+        //            }
+        //        }
+        //    };
+        //}
     }
 }
