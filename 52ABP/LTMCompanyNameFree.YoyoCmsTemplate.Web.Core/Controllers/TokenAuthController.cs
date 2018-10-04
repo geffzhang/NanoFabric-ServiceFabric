@@ -18,6 +18,9 @@ using LTMCompanyNameFree.YoyoCmsTemplate.Authorization.Users;
 using LTMCompanyNameFree.YoyoCmsTemplate.Models.TokenAuth;
 using LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy;
 using IdentityModel.Client;
+using System.Net;
+using System.Net.Http;
+using Microsoft.Extensions.Configuration;
 
 namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
 {
@@ -31,7 +34,7 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
         private readonly IExternalAuthConfiguration _externalAuthConfiguration;
         private readonly IExternalAuthManager _externalAuthManager;
         private readonly UserRegistrationManager _userRegistrationManager;
-
+        private readonly IConfiguration _envConfiguration;
         public TokenAuthController(
             LogInManager logInManager,
             ITenantCache tenantCache,
@@ -39,7 +42,8 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
             TokenAuthConfiguration configuration,
             IExternalAuthConfiguration externalAuthConfiguration,
             IExternalAuthManager externalAuthManager,
-            UserRegistrationManager userRegistrationManager)
+            UserRegistrationManager userRegistrationManager,
+            IConfiguration envConfiguration)
         {
             _logInManager = logInManager;
             _tenantCache = tenantCache;
@@ -48,12 +52,18 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
             _externalAuthConfiguration = externalAuthConfiguration;
             _externalAuthManager = externalAuthManager;
             _userRegistrationManager = userRegistrationManager;
+            _envConfiguration = envConfiguration;
         }
-        static string baseUrl = "http://localhost:8492";
+        //static string baseUrl = "http://localhost:8492/serviceoauth";
+        static string baseUrl = "http://localhost:8720";
+
         [HttpPost]
         public async Task<AuthenticateResultModel> Authenticate([FromBody] AuthenticateModel model)
         {
-            var tokenClient = new TokenClient($"http://localhost:8720/connect/token", "client", "secret");
+            var tmp = _envConfiguration["Authentication:IdentityServer4:Authority"];
+            var httpHandler = new HttpClientHandler();
+            httpHandler.CookieContainer.Add(new Uri(baseUrl), new Cookie(MultiTenancyConsts.TenantIdResolveKey, AbpSession.TenantId?.ToString())); //Set TenantId
+            var tokenClient = new TokenClient($"{baseUrl}/connect/token", "client", "secret", httpHandler);
             var tokenResponse = tokenClient.RequestResourceOwnerPasswordAsync("admin", "123qwe")
                 .ConfigureAwait(false)
                 .GetAwaiter().GetResult();

@@ -66,4 +66,5 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
 </Project>

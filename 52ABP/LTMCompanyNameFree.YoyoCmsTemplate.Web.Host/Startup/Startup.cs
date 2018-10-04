@@ -17,6 +17,7 @@ using LTMCompanyNameFree.YoyoCmsTemplate.Configuration;
 using LTMCompanyNameFree.YoyoCmsTemplate.Identity;
 
 using Abp.AspNetCore.SignalR.Hubs;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
 {
@@ -43,24 +44,24 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
 
             services.AddSignalR();
 
-            // 只有 Debug 的时候才使用跨域
             // Configure CORS for angular2 UI
             services.AddCors(
                 options => options.AddPolicy(
                     _defaultCorsPolicyName,
                     builder => builder
                         .WithOrigins(
-                            // App:CorsOrigins in appsettings.json can contain more than one address separated by comma.
-                            _appConfiguration["App:CorsOrigins"]
-                                .Split(",", StringSplitOptions.RemoveEmptyEntries)
-                                .Select(o => o.RemovePostFix("/"))
-                                .ToArray()
+                        "*"
+                            //// App:CorsOrigins in appsettings.json can contain more than one address separated by comma.
+                            //_appConfiguration["App:CorsOrigins"]
+                            //    .Split(",", StringSplitOptions.RemoveEmptyEntries)
+                            //    .Select(o => o.RemovePostFix("/"))
+                            //    .ToArray()
                         )
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials()
                 )
-            ); 
+            );
 
             // Swagger - Enable this line and the related lines in Configure method to enable swagger UI
             services.AddSwaggerGen(options =>
@@ -71,7 +72,7 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
                 // Define the BearerAuth scheme that's in use
                 options.AddSecurityDefinition("bearerAuth", new ApiKeyScheme()
                 {
-                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                    Description = "JWT Authorization header using the IdentityBearer scheme. Example: \"Authorization: IdentityBearer {token}\"",
                     Name = "Authorization",
                     In = "header",
                     Type = "apiKey"
@@ -79,7 +80,6 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
                 // Assign scope requirements to operations based on AuthorizeAttribute
                 options.OperationFilter<SecurityRequirementsOperationFilter>();
             });
-
 
             // Configure Abp and Dependency Injection
             return services.AddAbp<YoyoCmsTemplateWebHostModule>(
@@ -98,19 +98,17 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
 
             app.UseStaticFiles();
 
-
+            app.UseAuthentication();
+            app.UseJwtTokenMiddleware("IdentityBearer");
             // TODO:IdentiyServer Config Use
-            if (bool.Parse(_appConfiguration["Authentication:JwtBearer:IsEnabled"]))
-            {
-                app.UseAuthentication();
-                app.UseJwtTokenMiddleware();
-            }
-            else if (bool.Parse(_appConfiguration["Authentication:IdentityServer4:IsEnabled"]))
-            {
-                app.UseAuthentication();
-                app.UseJwtTokenMiddleware("IdentityBearer");
-                //app.UseIdentityServer();
-            }
+            //if (bool.Parse(_appConfiguration["Authentication:JwtBearer:IsEnabled"]))
+            //{
+            //    app.UseJwtTokenMiddleware();
+            //}
+            //else if (bool.Parse(_appConfiguration["Authentication:IdentityServer4:IsEnabled"]))
+            //{
+            //    app.UseJwtTokenMiddleware("IdentityBearer");
+            //}
 
             app.UseAbpRequestLocalization();
 
@@ -120,12 +118,18 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
                 routes.MapHub<AbpCommonHub>("/signalr");
             });
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
-            });
+            app.UseMvcWithDefaultRoute();
+
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "defaultWithArea",
+            //        template: "{area}/{controller=Home}/{action=Index}/{id?}");
+
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Home}/{action=Index}/{id?}");
+            //});
 
             // Enable middleware to serve generated Swagger as a JSON endpoint
             app.UseSwagger();
