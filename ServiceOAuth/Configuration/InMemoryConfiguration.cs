@@ -18,7 +18,19 @@ namespace ServiceOAuth.Configuration
                 new ApiResource("api1", "ServiceA api")
                 {
                     UserClaims = new List<string> { "City", "State" }
-                }
+                },
+                new ApiResource("default-api", "Default (all) API")
+            };
+        }
+
+        public static IEnumerable<IdentityResource> IdentityResources()
+        {
+            return new List<IdentityResource>
+            {
+                new IdentityResources.OpenId(),
+                new IdentityResources.Profile(),
+                new IdentityResources.Email(),
+                new IdentityResources.Phone()
             };
         }
 
@@ -36,26 +48,36 @@ namespace ServiceOAuth.Configuration
                         "api1"
                     },
                     AlwaysSendClientClaims = true
-                }
-            };
-        }
-
-        public static IEnumerable<TestUser> Users()
-        {
-            return new[]
-            {  
-                new TestUser
+                },
+                 new Client
                 {
-                    SubjectId = "1",
-                    Username = "bob@weyhd.com",
-                    Password = "bob123!",
-                    Claims = new List<Claim>
+                    ClientId = "client",
+                    AllowedGrantTypes = GrantTypes.ClientCredentials.Union  (GrantTypes.ResourceOwnerPassword).ToList(),
+                    AllowedScopes = {"default-api"},
+                    ClientSecrets =
                     {
-                        new Claim("City", "Shenzhen"),
-                        new Claim("State", "Guangdong")
+                        new Secret("secret".Sha256())
                     }
                 }
             };
         }
+
+        //public static IEnumerable<TestUser> Users()
+        //{
+        //    return new[]
+        //    {
+        //        new TestUser
+        //        {
+        //            SubjectId = "1",
+        //            Username = "admin",
+        //            Password = "123qwe",
+        //            Claims = new List<Claim>
+        //            {
+        //                new Claim("City", "Shenzhen"),
+        //                new Claim("State", "Guangdong")
+        //            }
+        //        }
+        //    };
+        //}
     }
 }
