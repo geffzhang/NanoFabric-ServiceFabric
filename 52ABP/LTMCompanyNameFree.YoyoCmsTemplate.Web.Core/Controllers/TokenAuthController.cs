@@ -84,7 +84,7 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
                 AccessToken = tokenResponse.AccessToken,
                 EncryptedAccessToken = GetEncrpyedAccessToken(tokenResponse.AccessToken),
                 ExpireInSeconds = (int)_tokenConfiguration.Expiration.TotalSeconds,
-                UserId = 1
+                //UserId = 1
             };
 
             #region default auth
