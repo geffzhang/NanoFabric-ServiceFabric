@@ -9,6 +9,7 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host
 {
     public class Program
     {
+#if !DEBUG
         public static void Main(string[] args)
         {
             try
@@ -36,11 +37,20 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host
             //BuildWebHost(args).Run();
         }
 
+#endif
+
+#if DEBUG
+        private static void Main(string[] args)
+        {
+            BuildWebHost(args).Run();
+        }
+
         public static IWebHost BuildWebHost(string[] args)
         {
             return WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup.Startup>()
                 .Build();
         }
+#endif
     }
 }

@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.ServiceFabric.Services.Runtime;
+using NanoFabric.Ocelot;
 using System;
 using System.Diagnostics;
 using System.Diagnostics.Tracing;
@@ -11,6 +14,7 @@ namespace NanoFabricGateway
 {
     internal static class Program
     {
+#if !DEBUG
         /// <summary>
         /// This is the entry point of the service host process.
         /// </summary>
@@ -34,13 +38,33 @@ namespace NanoFabricGateway
 
                 // Prevents this host process from terminating so services keeps running. 
                 Thread.Sleep(Timeout.Infinite);
- 
+
             }
             catch (Exception e)
             {
                 ServiceEventSource.Current.ServiceHostInitializationFailed(e);
                 throw;
             }
+        } 
+#endif
+#if DEBUG    
+        private static void Main(string[] args)
+        {
+            BuildWebHost(args).Run();
         }
+
+        public static IWebHost BuildWebHost(string[] args)
+        {
+            return WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
+                .ConfigureAppConfiguration((hostingContext, builder) =>
+                {
+                    // Ocelot配置文件
+                    builder.AddJsonFile("ocelot.json", false, true);
+                })
+                .Build();
+        }
+
+#endif
     }
 }
