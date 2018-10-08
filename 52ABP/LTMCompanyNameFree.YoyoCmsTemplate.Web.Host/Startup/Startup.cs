@@ -97,16 +97,16 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
 
             app.UseStaticFiles();
 
-            app.UseAuthentication();
+           
 
             // TODO:IdentiyServer Config Use
             if (bool.Parse(_appConfiguration["Authentication:JwtBearer:IsEnabled"]))
             {
-                app.UseJwtTokenMiddleware();
+                app.UseAuthentication();
             }
             else if (bool.Parse(_appConfiguration["Authentication:IdentityServer4:IsEnabled"]))
             {
-                app.UseJwtTokenMiddleware("IdentityBearer");
+                app.UseJwtTokenMiddleware(JwtBearerDefaults.AuthenticationScheme);
             }
 
             app.UseAbpRequestLocalization();
@@ -140,6 +140,7 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
 
             app.UseSwaggerUI(options =>
             {
+                //options.SwaggerEndpoint(_appConfiguration["App:ServerRootAddress"] + "/swagger/v1/swagger.json", "AbpCoreMvcIdentiyServer API V1");
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "YoyoCmsTemplate API V1");
                 options.IndexStream = () => Assembly.GetExecutingAssembly()
                     .GetManifestResourceStream("LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.wwwroot.swagger.ui.index.html");

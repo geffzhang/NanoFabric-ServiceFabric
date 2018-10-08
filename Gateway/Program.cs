@@ -14,7 +14,7 @@ namespace NanoFabricGateway
 {
     internal static class Program
     {
-#if !DEBUG
+
         /// <summary>
         /// This is the entry point of the service host process.
         /// </summary>
@@ -46,25 +46,23 @@ namespace NanoFabricGateway
                 throw;
             }
         } 
-#endif
-#if DEBUG    
-        private static void Main(string[] args)
-        {
-            BuildWebHost(args).Run();
-        }
+ 
+        //private static void Main(string[] args)
+        //{
+        //    BuildWebHost(args).Run();
+        //}
 
-        public static IWebHost BuildWebHost(string[] args)
-        {
-            return WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .ConfigureAppConfiguration((hostingContext, builder) =>
-                {
-                    // Ocelot配置文件
-                    builder.AddJsonFile("ocelot.json", false, true);
-                })
-                .Build();
-        }
+        //public static IWebHost BuildWebHost(string[] args)
+        //{
+        //    return WebHost.CreateDefaultBuilder(args)
+        //        .UseStartup<Startup>()
+        //        .ConfigureAppConfiguration((hostingContext, builder) =>
+        //        {
+        //            // Ocelot配置文件
+        //            builder.AddJsonFile("ocelot.json", false, true);
+        //        })
+        //        .Build();
+        //}
 
-#endif
     }
 }

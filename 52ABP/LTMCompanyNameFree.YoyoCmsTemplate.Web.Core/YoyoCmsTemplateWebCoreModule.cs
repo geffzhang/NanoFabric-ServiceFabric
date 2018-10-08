@@ -56,13 +56,28 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate
         private void ConfigureTokenAuth()
         {
             IocManager.Register<TokenAuthConfiguration>();
+
+            // TODO:读取Token配置
+
             var tokenAuthConfig = IocManager.Resolve<TokenAuthConfiguration>();
 
-            tokenAuthConfig.SecurityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_appConfiguration["Authentication:JwtBearer:SecurityKey"]));
-            tokenAuthConfig.Issuer = _appConfiguration["Authentication:JwtBearer:Issuer"];
-            tokenAuthConfig.Audience = _appConfiguration["Authentication:JwtBearer:Audience"];
-            tokenAuthConfig.SigningCredentials = new SigningCredentials(tokenAuthConfig.SecurityKey, SecurityAlgorithms.HmacSha256);
-            tokenAuthConfig.Expiration = TimeSpan.FromDays(1);
+            // 默认的配置
+            if (bool.Parse(_appConfiguration["Authentication:JwtBearer:IsEnabled"]))
+            {
+                tokenAuthConfig.SecurityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_appConfiguration["Authentication:JwtBearer:SecurityKey"]));
+                tokenAuthConfig.Issuer = _appConfiguration["Authentication:JwtBearer:Issuer"];
+                tokenAuthConfig.Audience = _appConfiguration["Authentication:JwtBearer:Audience"];
+                tokenAuthConfig.SigningCredentials = new SigningCredentials(tokenAuthConfig.SecurityKey, SecurityAlgorithms.HmacSha256);
+                tokenAuthConfig.Expiration = TimeSpan.FromDays(1);
+
+            }// ids4的配置
+            else if (bool.Parse(_appConfiguration["Authentication:IdentityServer4:IsEnabled"]))
+            {
+                tokenAuthConfig.Authority = _appConfiguration["Authentication:IdentityServer4:Authority"];
+                tokenAuthConfig.ClientId = _appConfiguration["Authentication:IdentityServer4:ClientId"];
+                tokenAuthConfig.Secret = _appConfiguration["Authentication:IdentityServer4:Secret"];
+            }
+
         }
 
         public override void Initialize()

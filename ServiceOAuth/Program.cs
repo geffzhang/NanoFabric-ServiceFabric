@@ -10,11 +10,10 @@ namespace ServiceOAuth
 {
     internal static class Program
     {
-#if !DEBUG
         /// <summary>
         /// This is the entry point of the service host process.
         /// </summary>
-        private static void Main()
+        private static void Main(string[] args)
         {
             try
             {
@@ -36,14 +35,11 @@ namespace ServiceOAuth
                 ServiceEventSource.Current.ServiceHostInitializationFailed(e.ToString());
                 throw;
             }
-        } 
-#endif
 
-#if DEBUG
-        private static void Main(string[] args)
-        {
-            BuildWebHost(args).Run();
+            //BuildWebHost(args).Run();
         }
+
+
 
         public static IWebHost BuildWebHost(string[] args)
         {
@@ -51,6 +47,5 @@ namespace ServiceOAuth
                 .UseStartup<Startup>()
                 .Build();
         }
-#endif
     }
 }

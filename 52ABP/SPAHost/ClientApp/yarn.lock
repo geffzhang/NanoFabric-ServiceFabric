@@ -5194,7 +5194,7 @@ ng-alain@^1.1.3:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/ng-alain/-/ng-alain-1.3.1.tgz#362a071d47b49005a403c11bf673868cd5e574a4"
 
-ng-zorro-antd@^1.6.0:
+ng-zorro-antd@1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/ng-zorro-antd/-/ng-zorro-antd-1.6.0.tgz#28e5dd602bf0e59676ec032824e19049046d8999"
   dependencies:
@@ -8758,9 +8758,9 @@ yn@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
 
-yoyo-ng-module@^1.1.32:
-  version "1.1.32"
-  resolved "https://registry.yarnpkg.com/yoyo-ng-module/-/yoyo-ng-module-1.1.32.tgz#9c6224e9569a9ad1d4cf6708b4173b0f6b20576c"
+yoyo-ng-module@^1.1.33:
+  version "1.1.33"
+  resolved "https://registry.yarnpkg.com/yoyo-ng-module/-/yoyo-ng-module-1.1.33.tgz#b48b4da5436325b2427c550fd5f7417f6d7ca1be"
 
 zone.js@^0.8.26:
   version "0.8.26"

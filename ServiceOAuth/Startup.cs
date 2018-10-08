@@ -49,10 +49,9 @@ namespace ServiceOAuth
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-     
+
             // TODO:IdentiyServer Config Add
             IdentityRegistrar.Register(services);
-            //AuthConfigurer.Configure(services, _appConfiguration);
 
             services.AddIdentityServer()
               .AddDeveloperSigningCredential()
@@ -60,7 +59,9 @@ namespace ServiceOAuth
               .AddInMemoryApiResources(InMemoryConfiguration.ApiResources())
               .AddInMemoryClients(InMemoryConfiguration.Clients())
               .AddAbpPersistedGrants<IAbpPersistedGrantDbContext>()
-              .AddAbpIdentityServer<User>(); ;
+              .AddAbpIdentityServer<User>()
+              .AddResourceOwnerValidator<ResourceOwnerPasswordValidator>()
+              .AddProfileService<ProfileService>();
 
 
             // Configure Abp and Dependency Injection
@@ -88,21 +89,7 @@ namespace ServiceOAuth
 
             app.UseStaticFiles();
 
-
-            app.UseAuthentication();
-
-            // TODO:IdentiyServer Config Use
-            if (bool.Parse(_appConfiguration["Authentication:JwtBearer:IsEnabled"]))
-            {
-                app.UseJwtTokenMiddleware();
-            }
-            else if (bool.Parse(_appConfiguration["Authentication:IdentityServer4:IsEnabled"]))
-            {
-                app.UseJwtTokenMiddleware("IdentityBearer");
-                app.UseIdentityServer();
-            }
-
-
+            app.UseIdentityServer();
 
             app.UseMvcWithDefaultRoute();
         }

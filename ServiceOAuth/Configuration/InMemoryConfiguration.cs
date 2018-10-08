@@ -19,7 +19,7 @@ namespace ServiceOAuth.Configuration
                 {
                     UserClaims = new List<string> { "City", "State" }
                 },
-                new ApiResource("default-api", "Default (all) API")
+                new ApiResource("52abp-api", "52ABP (all) API")
             };
         }
 
@@ -40,24 +40,33 @@ namespace ServiceOAuth.Configuration
             {
                 new Client
                 {
-                    ClientId = "52abp",
-                    ClientSecrets = { new Secret("secret".Sha256()) },
-                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
-                    AccessTokenType = AccessTokenType.Jwt,
-                    AllowedScopes = {
-                        "api1"
-                    },
-                    AlwaysSendClientClaims = true
-                },
-                 new Client
-                {
-                    ClientId = "client",
-                    AllowedGrantTypes = GrantTypes.ClientCredentials.Union  (GrantTypes.ResourceOwnerPassword).ToList(),
-                    AllowedScopes = {"default-api"},
+                    ClientId = "default.client",
                     ClientSecrets =
                     {
-                        new Secret("secret".Sha256())
-                    }
+                        new Secret("defaultSecret".Sha256())
+                    },
+                     AllowedScopes = {
+                        "api1"
+                    },
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    AccessTokenType = AccessTokenType.Jwt,
+                    AlwaysSendClientClaims = true
+                },
+                new Client
+                {
+                    ClientId = "52abp.client",
+                    ClientSecrets =
+                    {
+                        new Secret("52abpSecret".Sha256())
+                    },
+                    AllowedScopes =
+                    {
+                         "api1",
+                         "52abp-api"
+                    },
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    AccessTokenType = AccessTokenType.Jwt,
+                    AlwaysSendClientClaims = true
                 }
             };
         }
