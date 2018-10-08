@@ -72,12 +72,16 @@ export class AppPreBootstrap {
   private static getUserConfiguration(
     callback: () => void,
   ): JQueryPromise<any> {
+    let token = abp.auth.getToken();
+    if (!token || token === null) {
+      token = '';
+    }
     return abp
       .ajax({
         url: AppConsts.remoteServiceBaseUrl + '/AbpUserConfiguration/GetAll',
         method: 'GET',
         headers: {
-          Authorization: 'Bearer ' + abp.auth.getToken(),
+          Authorization: 'Bearer ' + token,
           '.AspNetCore.Culture': abp.utils.getCookieValue(
             'Abp.Localization.CultureName',
           ),

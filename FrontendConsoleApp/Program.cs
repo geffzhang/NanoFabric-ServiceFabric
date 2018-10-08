@@ -14,30 +14,14 @@ namespace FrontendConsoleApp
 {
     class Program
     {
-        static string baseUrl = "http://127.0.0.1:8492";
+        static string gatwayBaseUrl = "http://localhost:8492";
+
+        static string oauthUrl = "http://localhost:19081/NanoFabric_ServiceFabric/ServiceOAuth";
+
         static void Main(string[] args)
         {
             RunDemoAsync().Wait();
             Console.ReadLine();
-            
-            //var tokenClient = new TokenClient($"{baseUrl}/serviceoauth/connect/token", "52abp", "secret");
-            //var tokenResponse = tokenClient.RequestResourceOwnerPasswordAsync("admin", "123qwe").ConfigureAwait(false)
-            //    .GetAwaiter().GetResult();
-
-            //if (tokenResponse.IsError)
-            //{
-            //    throw new ApplicationException($"Status code: {tokenResponse.IsError}, Error: {tokenResponse.Error}");
-            //}
-
-            //var httpClient = new HttpClient();
-            //httpClient.SetBearerToken(tokenResponse.AccessToken);
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    string response = httpClient.GetStringAsync($"{baseUrl}/servicea/api/values").ConfigureAwait(false).GetAwaiter().GetResult();
-            //    Console.WriteLine(response);
-            //}
-            //Console.ReadLine();
-
         }
 
 
@@ -46,15 +30,24 @@ namespace FrontendConsoleApp
         {
             var accessToken = await GetAccessTokenViaOwnerPasswordAsync();
             await GetUsersListAsync(accessToken);
+            await GetValuesApi(accessToken);
         }
 
+
+        /// <summary>
+        /// get token 
+        /// </summary>
+        /// <returns></returns>
         private static async Task<string> GetAccessTokenViaOwnerPasswordAsync()
         {
-            var disco = await DiscoveryClient.GetAsync("http://localhost:8720");
 
             var httpHandler = new HttpClientHandler();
-            httpHandler.CookieContainer.Add(new Uri("http://localhost:8720/"), new Cookie(MultiTenancyConsts.TenantIdResolveKey, "1")); //Set TenantId
-            var tokenClient = new TokenClient(disco.TokenEndpoint, "client", "secret", httpHandler);
+            httpHandler.CookieContainer.Add(
+                //Set TenantId,host is null or empty
+                new Uri(oauthUrl), new Cookie(MultiTenancyConsts.TenantIdResolveKey, string.Empty)
+            );
+            // request token
+            var tokenClient = new TokenClient($"{oauthUrl}/connect/token", "52abp.client", "52abpSecret", httpHandler);
             var tokenResponse = await tokenClient.RequestResourceOwnerPasswordAsync("admin", "123qwe");
 
             if (tokenResponse.IsError)
@@ -68,12 +61,17 @@ namespace FrontendConsoleApp
             return tokenResponse.AccessToken;
         }
 
+        /// <summary>
+        /// get 52abp user list API
+        /// </summary>
+        /// <param name="accessToken"></param>
+        /// <returns></returns>
         private static async Task GetUsersListAsync(string accessToken)
         {
             var client = new HttpClient();
             client.SetBearerToken(accessToken);
 
-            var response = await client.GetAsync("http://localhost:8492/test/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10");
+            var response = await client.GetAsync($"{gatwayBaseUrl}/test/api/services/app/User/GetAll?SkipCount=0&MaxResultCount=10");
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine(response.StatusCode);
@@ -95,6 +93,20 @@ namespace FrontendConsoleApp
                 Console.WriteLine($"### UserId: {user.Id}, UserName: {user.UserName}");
                 Console.WriteLine(user.ToJsonString(indented: true));
             }
+        }
+
+        /// <summary>
+        /// get default values API
+        /// </summary>
+        /// <param name="accessToken"></param>
+        /// <returns></returns>
+        private static async Task GetValuesApi(string accessToken)
+        {
+            var httpClient = new HttpClient();
+            httpClient.SetBearerToken(accessToken);
+            string response = await httpClient.GetStringAsync($"{gatwayBaseUrl}/servicea/api/values")
+                .ConfigureAwait(false);
+            Console.WriteLine(response);
         }
     }
 

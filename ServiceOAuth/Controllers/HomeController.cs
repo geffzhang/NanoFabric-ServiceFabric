@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LTMCompanyNameFree.YoyoCmsTemplate.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ServiceOAuth.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : YoyoCmsTemplateControllerBase
     {
         public IActionResult Index()
         {
