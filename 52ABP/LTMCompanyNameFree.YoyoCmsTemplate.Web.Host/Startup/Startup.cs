@@ -50,12 +50,11 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
                     _defaultCorsPolicyName,
                     builder => builder
                         .WithOrigins(
-                        "*"
-                            //// App:CorsOrigins in appsettings.json can contain more than one address separated by comma.
-                            //_appConfiguration["App:CorsOrigins"]
-                            //    .Split(",", StringSplitOptions.RemoveEmptyEntries)
-                            //    .Select(o => o.RemovePostFix("/"))
-                            //    .ToArray()
+                            // App:CorsOrigins in appsettings.json can contain more than one address separated by comma.
+                            _appConfiguration["App:CorsOrigins"]
+                                .Split(",", StringSplitOptions.RemoveEmptyEntries)
+                                .Select(o => o.RemovePostFix("/"))
+                                .ToArray()
                         )
                         .AllowAnyHeader()
                         .AllowAnyMethod()
@@ -66,13 +65,13 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
             // Swagger - Enable this line and the related lines in Configure method to enable swagger UI
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new Info { Title = "YoyoCmsTemplate API", Version = "v1" });
+                options.SwaggerDoc("v1", new Info { Title = "AbpCoreMvcIdentiyServer API", Version = "v1" });
                 options.DocInclusionPredicate((docName, description) => true);
 
                 // Define the BearerAuth scheme that's in use
                 options.AddSecurityDefinition("bearerAuth", new ApiKeyScheme()
                 {
-                    Description = "JWT Authorization header using the IdentityBearer scheme. Example: \"Authorization: IdentityBearer {token}\"",
+                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
                     Name = "Authorization",
                     In = "header",
                     Type = "apiKey"
@@ -99,16 +98,16 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
             app.UseStaticFiles();
 
             app.UseAuthentication();
-            app.UseJwtTokenMiddleware("IdentityBearer");
+
             // TODO:IdentiyServer Config Use
-            //if (bool.Parse(_appConfiguration["Authentication:JwtBearer:IsEnabled"]))
-            //{
-            //    app.UseJwtTokenMiddleware();
-            //}
-            //else if (bool.Parse(_appConfiguration["Authentication:IdentityServer4:IsEnabled"]))
-            //{
-            //    app.UseJwtTokenMiddleware("IdentityBearer");
-            //}
+            if (bool.Parse(_appConfiguration["Authentication:JwtBearer:IsEnabled"]))
+            {
+                app.UseJwtTokenMiddleware();
+            }
+            else if (bool.Parse(_appConfiguration["Authentication:IdentityServer4:IsEnabled"]))
+            {
+                app.UseJwtTokenMiddleware("IdentityBearer");
+            }
 
             app.UseAbpRequestLocalization();
 
@@ -118,22 +117,27 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
                 routes.MapHub<AbpCommonHub>("/signalr");
             });
 
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "defaultWithArea",
+                    template: "{area}/{controller=Home}/{action=Index}/{id?}");
 
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(
-            //        name: "defaultWithArea",
-            //        template: "{area}/{controller=Home}/{action=Index}/{id?}");
-
-            //    routes.MapRoute(
-            //        name: "default",
-            //        template: "{controller=Home}/{action=Index}/{id?}");
-            //});
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
 
             // Enable middleware to serve generated Swagger as a JSON endpoint
             app.UseSwagger();
             // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
+            //app.UseSwaggerUI(options =>
+            //{
+            //    options.SwaggerEndpoint(_appConfiguration["App:ServerRootAddress"] + "/swagger/v1/swagger.json", "AbpCoreMvcIdentiyServer API V1");
+            //    options.IndexStream = () => Assembly.GetExecutingAssembly()
+            //        .GetManifestResourceStream("AbpCoreMvcIdentiyServer.Web.Host.wwwroot.swagger.ui.index.html");
+            //}); // URL: /swagger
+
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "YoyoCmsTemplate API V1");

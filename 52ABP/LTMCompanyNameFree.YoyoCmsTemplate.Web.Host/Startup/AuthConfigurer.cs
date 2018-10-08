@@ -15,67 +15,53 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
     {
         public static void Configure(IServiceCollection services, IConfiguration configuration)
         {
-            //if (bool.Parse(configuration["Authentication:JwtBearer:IsEnabled"]))
-            //{
-            //    services.AddAuthentication(options =>
-            //    {
-            //        options.DefaultAuthenticateScheme = "JwtBearer";
-            //        options.DefaultChallengeScheme = "JwtBearer";
-            //    }).AddJwtBearer("JwtBearer", options =>
-            //    {
-            //        options.Audience = configuration["Authentication:JwtBearer:Audience"];
+            if (bool.Parse(configuration["Authentication:JwtBearer:IsEnabled"]))
+            {
+                services.AddAuthentication(options => {
+                    options.DefaultAuthenticateScheme = "JwtBearer";
+                    options.DefaultChallengeScheme = "JwtBearer";
+                }).AddJwtBearer("JwtBearer", options =>
+                {
+                    options.Audience = configuration["Authentication:JwtBearer:Audience"];
 
-            //        options.TokenValidationParameters = new TokenValidationParameters
-            //        {
-            //            // The signing key must match!
-            //            ValidateIssuerSigningKey = true,
-            //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration["Authentication:JwtBearer:SecurityKey"])),
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        // The signing key must match!
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration["Authentication:JwtBearer:SecurityKey"])),
 
-            //            // Validate the JWT Issuer (iss) claim
-            //            ValidateIssuer = true,
-            //            ValidIssuer = configuration["Authentication:JwtBearer:Issuer"],
+                        // Validate the JWT Issuer (iss) claim
+                        ValidateIssuer = true,
+                        ValidIssuer = configuration["Authentication:JwtBearer:Issuer"],
 
-            //            // Validate the JWT Audience (aud) claim
-            //            ValidateAudience = true,
-            //            ValidAudience = configuration["Authentication:JwtBearer:Audience"],
+                        // Validate the JWT Audience (aud) claim
+                        ValidateAudience = true,
+                        ValidAudience = configuration["Authentication:JwtBearer:Audience"],
 
-            //            // Validate the token expiry
-            //            ValidateLifetime = true,
+                        // Validate the token expiry
+                        ValidateLifetime = true,
 
-            //            // If you want to allow a certain amount of clock drift, set that here
-            //            ClockSkew = TimeSpan.Zero
-            //        };
+                        // If you want to allow a certain amount of clock drift, set that here
+                        ClockSkew = TimeSpan.Zero
+                    };
 
-            //        options.Events = new JwtBearerEvents
-            //        {
-            //            OnMessageReceived = QueryStringTokenResolver
-            //        };
-            //    });
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = QueryStringTokenResolver
+                    };
+                });
 
-
-            //} // TODO:Add IdentiyServer Authentication
-            //else if (bool.Parse(configuration["Authentication:IdentityServer4:IsEnabled"]))
-            //{
-            //    services.AddAuthentication()
-            //        .AddIdentityServerAuthentication("IdentityBearer", options =>
-            //        {
-            //            options.ApiName = configuration["Authentication:IdentityServer4:ApiName"];
-            //            options.Authority = configuration["Authentication:IdentityServer4:Authority"];
-            //            options.RequireHttpsMetadata = false;
-            //        });
-            //}
-
-            services.AddAuthentication()
-                   .AddIdentityServerAuthentication("IdentityBearer", options =>
-                   {
-                       /*
-                            "ApiName": "default-api",
-                            "Authority": "http://localhost:8720"
-                        */
-                       //options.ApiName = "default-api";
-                       options.Authority = "http://localhost:8492/serviceoauth";//configuration["Authentication:IdentityServer4:Authority"];
-                       options.RequireHttpsMetadata = false;
-                   });
+            }// TODO:Add IdentiyServer Authentication
+            else if (bool.Parse(configuration["Authentication:IdentityServer4:IsEnabled"]))
+            {
+                services.AddAuthentication()
+                    .AddIdentityServerAuthentication("IdentityBearer", options =>
+                    {
+                        options.ApiName = configuration["Authentication:IdentityServer4:ApiName"];
+                        options.Authority = configuration["Authentication:IdentityServer4:Authority"];
+                        options.RequireHttpsMetadata = false;
+                    });
+            }
         }
 
         /* This method is needed to authorize SignalR javascript client.

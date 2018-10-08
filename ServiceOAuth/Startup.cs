@@ -49,16 +49,10 @@ namespace ServiceOAuth
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            //IdentityRegistrar.Register(services);
-            //AuthConfigurer.Configure(services, _appConfiguration);
-            //// MVC
-            //services.AddMvc(
-            //    options => options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute())
-            //);
-
+     
             // TODO:IdentiyServer Config Add
             IdentityRegistrar.Register(services);
-            AuthConfigurer.Configure(services, _appConfiguration);
+            //AuthConfigurer.Configure(services, _appConfiguration);
 
             services.AddIdentityServer()
               .AddDeveloperSigningCredential()

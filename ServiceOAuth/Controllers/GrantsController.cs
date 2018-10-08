@@ -2,6 +2,7 @@
 using IdentityServer4.Extensions;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
+using LTMCompanyNameFree.YoyoCmsTemplate.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceOAuth.Filter;
@@ -18,7 +19,7 @@ namespace ServiceOAuth.Controllers
     /// </summary>
     [SecurityHeaders]
     [Authorize]
-    public class GrantsController : Controller
+    public class GrantsController : YoyoCmsTemplateControllerBase
     {
         private readonly IIdentityServerInteractionService _interaction;
         private readonly IClientStore _clients;
