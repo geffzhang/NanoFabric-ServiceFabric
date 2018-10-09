@@ -21,6 +21,8 @@ using IdentityModel.Client;
 using System.Net;
 using System.Net.Http;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Hosting;
+using LTMCompanyNameFree.YoyoCmsTemplate.Configuration;
 
 namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
 {
@@ -30,11 +32,11 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
         private readonly LogInManager _logInManager;
         private readonly ITenantCache _tenantCache;
         private readonly AbpLoginResultTypeHelper _abpLoginResultTypeHelper;
-        private readonly TokenAuthConfiguration _configuration;
+        private readonly TokenAuthConfiguration _tokenConfiguration;
         private readonly IExternalAuthConfiguration _externalAuthConfiguration;
         private readonly IExternalAuthManager _externalAuthManager;
         private readonly UserRegistrationManager _userRegistrationManager;
-        private readonly IConfiguration _envConfiguration;
+        private readonly IConfigurationRoot _appConfiguration;
         public TokenAuthController(
             LogInManager logInManager,
             ITenantCache tenantCache,
@@ -43,28 +45,32 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
             IExternalAuthConfiguration externalAuthConfiguration,
             IExternalAuthManager externalAuthManager,
             UserRegistrationManager userRegistrationManager,
-            IConfiguration envConfiguration)
+            IHostingEnvironment env)
         {
             _logInManager = logInManager;
             _tenantCache = tenantCache;
             _abpLoginResultTypeHelper = abpLoginResultTypeHelper;
-            _configuration = configuration;
+            _tokenConfiguration = configuration;
             _externalAuthConfiguration = externalAuthConfiguration;
             _externalAuthManager = externalAuthManager;
             _userRegistrationManager = userRegistrationManager;
-            _envConfiguration = envConfiguration;
+            _appConfiguration = env.GetAppConfiguration();
         }
-        //static string baseUrl = "http://localhost:8492/serviceoauth";
-        static string baseUrl = "http://localhost:8720";
+
 
         [HttpPost]
         public async Task<AuthenticateResultModel> Authenticate([FromBody] AuthenticateModel model)
         {
-            var tmp = _envConfiguration["Authentication:IdentityServer4:Authority"];
             var httpHandler = new HttpClientHandler();
-            httpHandler.CookieContainer.Add(new Uri(baseUrl), new Cookie(MultiTenancyConsts.TenantIdResolveKey, AbpSession.TenantId?.ToString())); //Set TenantId
-            var tokenClient = new TokenClient($"{baseUrl}/connect/token", "client", "secret", httpHandler);
-            var tokenResponse = tokenClient.RequestResourceOwnerPasswordAsync("admin", "123qwe")
+            httpHandler.CookieContainer.Add(
+                new Uri(_tokenConfiguration.Authority), new Cookie(MultiTenancyConsts.TenantIdResolveKey, AbpSession.TenantId?.ToString())
+                ); //Set TenantId
+            var tokenClient = new TokenClient(
+                $"{_tokenConfiguration.Authority}/connect/token",
+                _tokenConfiguration.ClientId,
+                _tokenConfiguration.Secret,
+                httpHandler);
+            var tokenResponse = tokenClient.RequestResourceOwnerPasswordAsync(model.UserNameOrEmailAddress, model.Password)
                 .ConfigureAwait(false)
                 .GetAwaiter().GetResult();
 
@@ -77,11 +83,12 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
             {
                 AccessToken = tokenResponse.AccessToken,
                 EncryptedAccessToken = GetEncrpyedAccessToken(tokenResponse.AccessToken),
-                ExpireInSeconds = (int)_configuration.Expiration.TotalSeconds,
-                UserId = 1
+                ExpireInSeconds = (int)_tokenConfiguration.Expiration.TotalSeconds,
+                //UserId = 1
             };
 
-            return null;
+            #region default auth
+            
             //var loginResult = await GetLoginResultAsync(
             //    model.UserNameOrEmailAddress,
             //    model.Password,
@@ -96,7 +103,9 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
             //    EncryptedAccessToken = GetEncrpyedAccessToken(accessToken),
             //    ExpireInSeconds = (int)_configuration.Expiration.TotalSeconds,
             //    UserId = loginResult.User.Id
-            //};
+            //}; 
+
+            #endregion
         }
 
         [HttpGet]
@@ -121,7 +130,7 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
                         {
                             AccessToken = accessToken,
                             EncryptedAccessToken = GetEncrpyedAccessToken(accessToken),
-                            ExpireInSeconds = (int)_configuration.Expiration.TotalSeconds
+                            ExpireInSeconds = (int)_tokenConfiguration.Expiration.TotalSeconds
                         };
                     }
                 case AbpLoginResultType.UnknownExternalLogin:
@@ -149,7 +158,7 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
                         return new ExternalAuthenticateResultModel
                         {
                             AccessToken = CreateAccessToken(CreateJwtClaims(loginResult.Identity)),
-                            ExpireInSeconds = (int)_configuration.Expiration.TotalSeconds
+                            ExpireInSeconds = (int)_tokenConfiguration.Expiration.TotalSeconds
                         };
                     }
                 default:
@@ -228,12 +237,12 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Controllers
             var now = DateTime.UtcNow;
 
             var jwtSecurityToken = new JwtSecurityToken(
-                issuer: _configuration.Issuer,
-                audience: _configuration.Audience,
+                issuer: _tokenConfiguration.Issuer,
+                audience: _tokenConfiguration.Audience,
                 claims: claims,
                 notBefore: now,
-                expires: now.Add(expiration ?? _configuration.Expiration),
-                signingCredentials: _configuration.SigningCredentials
+                expires: now.Add(expiration ?? _tokenConfiguration.Expiration),
+                signingCredentials: _tokenConfiguration.SigningCredentials
             );
 
             return new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
