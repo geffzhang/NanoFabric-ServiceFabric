@@ -64,9 +64,12 @@ https://docs.microsoft.com/zh-cn/azure/service-fabric/service-fabric-overview
 ## 本地启动项目操作说明
   1、 启动 Service fabric local cluster manager ,保证本地集群是打开的状态。
 ![image.png](https://upload-images.jianshu.io/upload_images/1979022-0304e8c038f8e992.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 2、 打开`NanoFabric-ServiceFabric.sln`解决方案，**需要使用管理员权限**这点很重要，否则报错。
+
 3、 默认生成数据库内容，`LTMCompanyNameFree.YoyoCmsTemplate.Migrator`启动迁移文件工具，生成数据库。
 ![image.png](https://upload-images.jianshu.io/upload_images/1979022-50d14583343478f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 4、52abp前端计算静态站点,无状态服务,端口10091 运行程序前，使用命令行打开此路径,
 需要编译前端包，打开`ClientApp`然后运行
 ```
@@ -74,6 +77,7 @@ https://docs.microsoft.com/zh-cn/azure/service-fabric/service-fabric-overview
 2、还原成功后，输入 npm run build 打包
 ```
 5、设置`NanoFabric_ServiceFabric `为默认启动项目，然后启动它。
+
 ![image.png](https://upload-images.jianshu.io/upload_images/1979022-050d06f724a70d55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 6、启动成功，访问 http://localhost:10091
