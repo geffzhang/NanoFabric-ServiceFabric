@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /ServiceOAuth/App_Data/Logs/Logs.txt
+/52ABP/LTMCompanyNameFree.YoyoCmsTemplate.Web.Host/App_Data/Logs/HostLogs.log4
