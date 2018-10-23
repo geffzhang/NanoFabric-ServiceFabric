@@ -7,13 +7,17 @@
     <TargetLatestRuntimePatch>False</TargetLatestRuntimePatch>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Abp.AspNetCore" Version="3.7.2" />
-    <PackageReference Include="Abp.Castle.Log4Net" Version="3.7.2" />
+    <PackageReference Include="Abp.AspNetCore" Version="3.8.1" />
+    <PackageReference Include="Abp.Castle.Log4Net" Version="3.8.1" />
     <PackageReference Include="IdentityServer4" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.Kestrel" Version="3.2.176" />

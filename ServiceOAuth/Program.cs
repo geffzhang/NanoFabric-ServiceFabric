@@ -1,4 +1,6 @@
-﻿using Microsoft.ServiceFabric.Services.Runtime;
+﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.ServiceFabric.Services.Runtime;
 using System;
 using System.Diagnostics;
 using System.Threading;
@@ -11,7 +13,7 @@ namespace ServiceOAuth
         /// <summary>
         /// This is the entry point of the service host process.
         /// </summary>
-        private static void Main()
+        private static void Main(string[] args)
         {
             try
             {
@@ -33,6 +35,17 @@ namespace ServiceOAuth
                 ServiceEventSource.Current.ServiceHostInitializationFailed(e.ToString());
                 throw;
             }
+
+            //BuildWebHost(args).Run();
+        }
+
+
+
+        public static IWebHost BuildWebHost(string[] args)
+        {
+            return WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
+                .Build();
         }
     }
 }

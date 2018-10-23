@@ -6,7 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Abp.Web.Common" Version="3.7.2" />
     <PackageReference Include="IdentityModel" Version="3.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\52ABP\LTMCompanyNameFree.YoyoCmsTemplate.Application\LTMCompanyNameFree.YoyoCmsTemplate.Application.csproj" />
   </ItemGroup>
 
 </Project>

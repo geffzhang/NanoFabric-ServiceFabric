@@ -26,10 +26,8 @@ namespace ServiceA.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            var city = this.accessor.HttpContext.Request.Headers["claims_City"];
-            var state = this.accessor.HttpContext.Request.Headers["claims_State"];
 
-            return new string[] { "NodeName", context.NodeContext.NodeName ,city , state};
+            return new string[] { "NodeName:", context.NodeContext.NodeName, "this is default values api" };
         }
 
         // GET api/values/5

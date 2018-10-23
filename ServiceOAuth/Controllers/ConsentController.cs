@@ -3,6 +3,7 @@ using IdentityServer4.Extensions;
 using IdentityServer4.Models;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
+using LTMCompanyNameFree.YoyoCmsTemplate.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -20,7 +21,7 @@ namespace ServiceOAuth.Controllers
     /// </summary>
     [SecurityHeaders]
     [Authorize]
-    public class ConsentController : Controller
+    public class ConsentController : YoyoCmsTemplateControllerBase
     {
         private readonly IIdentityServerInteractionService _interaction;
         private readonly IClientStore _clientStore;

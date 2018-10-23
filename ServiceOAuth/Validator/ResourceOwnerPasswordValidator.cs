@@ -4,7 +4,6 @@ using Abp.Localization;
 using Abp.MultiTenancy;
 using Abp.Runtime.Session;
 using Abp.UI;
-using AutoMapper.Configuration;
 using IdentityServer4.Models;
 using IdentityServer4.Validation;
 using LTMCompanyNameFree.YoyoCmsTemplate.Authentication.External;
@@ -12,6 +11,7 @@ using LTMCompanyNameFree.YoyoCmsTemplate.Authentication.JwtBearer;
 using LTMCompanyNameFree.YoyoCmsTemplate.Authorization;
 using LTMCompanyNameFree.YoyoCmsTemplate.Authorization.Users;
 using LTMCompanyNameFree.YoyoCmsTemplate.MultiTenancy;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -38,10 +38,20 @@ namespace ServiceOAuth.Validator
             IConfiguration appConfiguration,
             LogInManager logInManager,
             ITenantCache tenantCache,
-
+            AbpLoginResultTypeHelper abpLoginResultTypeHelper,
+            TokenAuthConfiguration configuration,
+            IExternalAuthConfiguration externalAuthConfiguration,
+            IExternalAuthManager externalAuthManager,
             UserRegistrationManager userRegistrationManager)
         {
-            AbpSession = NullAbpSession.Instance;
+            _appConfiguration = appConfiguration;
+            _logInManager = logInManager;
+            _tenantCache = tenantCache;
+            _abpLoginResultTypeHelper = abpLoginResultTypeHelper;
+            _configuration = configuration;
+            _externalAuthConfiguration = externalAuthConfiguration;
+            _externalAuthManager = externalAuthManager;
+            _userRegistrationManager = userRegistrationManager;
         }
 
         public async Task ValidateAsync(ResourceOwnerPasswordValidationContext context)
@@ -56,7 +66,7 @@ namespace ServiceOAuth.Validator
 
                 context.Result = new GrantValidationResult(
                     subject: context.UserName,
-                    authenticationMethod: "custom",
+                    authenticationMethod: "passwrod",
                     claims: CreateJwtClaims(loginResult.Identity)
                     );
             }
@@ -64,27 +74,6 @@ namespace ServiceOAuth.Validator
             {
                 context.Result = new GrantValidationResult(TokenRequestErrors.InvalidGrant, e.Message);
             }
-
-            ////根据context.UserName和context.Password与数据库的数据做校验，判断是否合法
-            //if (context.UserName == "admin" && context.Password == "123")
-            //{
-            //    context.Result = new GrantValidationResult(
-            //        subject: context.UserName,
-            //        authenticationMethod: "custom",
-            //        claims: new Claim[]
-            //        {
-            //            new Claim("Name", context.UserName),
-
-            //            new Claim("UserId", "1"),
-            //            new Claim("RealName", "玩双截棍的熊猫"),
-            //            new Claim("Email", "msmadaoe@msn.com")
-            //        });
-            //}
-            //else
-            //{
-            //    //验证失败
-            //    context.Result = new GrantValidationResult(TokenRequestErrors.InvalidGrant, "invalid custom credential");
-            //}
         }
 
         private async Task<AbpLoginResult<Tenant, User>> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
@@ -96,7 +85,7 @@ namespace ServiceOAuth.Validator
                 case AbpLoginResultType.Success:
                     return loginResult;
                 default:
-                    throw new UserFriendlyException("Login Failed");
+                    throw _abpLoginResultTypeHelper.CreateExceptionForFailedLoginAttempt(loginResult.Result, usernameOrEmailAddress, tenancyName);
             }
         }
 
@@ -110,41 +99,16 @@ namespace ServiceOAuth.Validator
             return _tenantCache.GetOrNull(AbpSession.TenantId.Value)?.TenancyName;
         }
 
-        //private Exception CreateExceptionForFailedLoginAttempt(AbpLoginResultType result, string usernameOrEmailAddress, string tenancyName)
-        //{
-        //    //switch (result)
-        //    //{
-        //    //    case AbpLoginResultType.Success:
-        //    //        return new Exception("Don't call this method with a success result!");
-        //    //    case AbpLoginResultType.InvalidUserNameOrEmailAddress:
-        //    //    case AbpLoginResultType.InvalidPassword:
-        //    //        return new UserFriendlyException(L("LoginFailed"), L("InvalidUserNameOrPassword"));
-        //    //    case AbpLoginResultType.InvalidTenancyName:
-        //    //        return new UserFriendlyException(L("LoginFailed"), L("ThereIsNoTenantDefinedWithName{0}", tenancyName));
-        //    //    case AbpLoginResultType.TenantIsNotActive:
-        //    //        return new UserFriendlyException(L("LoginFailed"), L("TenantIsNotActive", tenancyName));
-        //    //    case AbpLoginResultType.UserIsNotActive:
-        //    //        return new UserFriendlyException(L("LoginFailed"), L("UserIsNotActiveAndCanNotLogin", usernameOrEmailAddress));
-        //    //    case AbpLoginResultType.UserEmailIsNotConfirmed:
-        //    //        return new UserFriendlyException(L("LoginFailed"), L("UserEmailIsNotConfirmedAndCanNotLogin"));
-        //    //    case AbpLoginResultType.LockedOut:
-        //    //        return new UserFriendlyException(L("LoginFailed"), L("UserLockedOutMessage"));
-        //    //    default: // Can not fall to default actually. But other result types can be added in the future and we may forget to handle it
-        //    //        //Logger.Warn("Unhandled login fail reason: " + result);
-        //    //        return new UserFriendlyException("LoginFailed");
-        //    //}
-        //}
-
 
         private static List<Claim> CreateJwtClaims(ClaimsIdentity identity)
         {
             var claims = identity.Claims.ToList();
-            var nameIdClaim = claims.First(c => c.Type == ClaimTypes.NameIdentifier);
+            var nameIdClaim = claims.First(c => c.Type == JwtRegisteredClaimNames.Sub);
 
             // Specifically add the jti (random nonce), iat (issued timestamp), and sub (subject/user) claims.
             claims.AddRange(new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, nameIdClaim.Value),
+                new Claim(ClaimTypes.NameIdentifier, nameIdClaim.Value),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 //new Claim(JwtRegisteredClaimNames.Iat, DateTimeOffset.Now.ToUnixTimeSeconds().ToString(), ClaimValueTypes.Integer64)
             });

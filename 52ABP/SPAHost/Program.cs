@@ -1,4 +1,6 @@
-﻿using Microsoft.ServiceFabric.Services.Runtime;
+﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.ServiceFabric.Services.Runtime;
 using System;
 using System.Diagnostics;
 using System.Threading;
@@ -8,6 +10,7 @@ namespace SPAHost
 {
     internal static class Program
     {
+
         /// <summary>
         /// 这是服务主机进程的入口点。
         /// </summary>
@@ -34,5 +37,18 @@ namespace SPAHost
                 throw;
             }
         }
+
+        //private static void Main(string[] args)
+        //{
+        //    BuildWebHost(args).Run();
+        //}
+
+        //public static IWebHost BuildWebHost(string[] args)
+        //{
+        //    return WebHost.CreateDefaultBuilder(args)
+        //        .UseStartup<Startup>()
+        //        .Build();
+        //}
+
     }
 }

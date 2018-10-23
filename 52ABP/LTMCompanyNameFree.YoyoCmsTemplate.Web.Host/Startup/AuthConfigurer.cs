@@ -17,8 +17,7 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
         {
             if (bool.Parse(configuration["Authentication:JwtBearer:IsEnabled"]))
             {
-                services.AddAuthentication(options =>
-                {
+                services.AddAuthentication(options => {
                     options.DefaultAuthenticateScheme = "JwtBearer";
                     options.DefaultChallengeScheme = "JwtBearer";
                 }).AddJwtBearer("JwtBearer", options =>
@@ -52,12 +51,11 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
                     };
                 });
 
-
-            } // TODO:Add IdentiyServer Authentication
+            }// TODO:Add IdentiyServer Authentication
             else if (bool.Parse(configuration["Authentication:IdentityServer4:IsEnabled"]))
             {
                 services.AddAuthentication()
-                    .AddIdentityServerAuthentication("IdentityBearer", options =>
+                    .AddIdentityServerAuthentication(JwtBearerDefaults.AuthenticationScheme, options =>
                     {
                         options.ApiName = configuration["Authentication:IdentityServer4:ApiName"];
                         options.Authority = configuration["Authentication:IdentityServer4:Authority"];

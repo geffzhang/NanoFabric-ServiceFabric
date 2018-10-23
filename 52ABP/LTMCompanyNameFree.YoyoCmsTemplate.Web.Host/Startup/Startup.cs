@@ -17,6 +17,7 @@ using LTMCompanyNameFree.YoyoCmsTemplate.Configuration;
 using LTMCompanyNameFree.YoyoCmsTemplate.Identity;
 
 using Abp.AspNetCore.SignalR.Hubs;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
 {
@@ -43,7 +44,6 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
 
             services.AddSignalR();
 
-            // 只有 Debug 的时候才使用跨域
             // Configure CORS for angular2 UI
             services.AddCors(
                 options => options.AddPolicy(
@@ -60,12 +60,12 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
                         .AllowAnyMethod()
                         .AllowCredentials()
                 )
-            ); 
+            );
 
             // Swagger - Enable this line and the related lines in Configure method to enable swagger UI
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new Info { Title = "YoyoCmsTemplate API", Version = "v1" });
+                options.SwaggerDoc("v1", new Info { Title = "AbpCoreMvcIdentiyServer API", Version = "v1" });
                 options.DocInclusionPredicate((docName, description) => true);
 
                 // Define the BearerAuth scheme that's in use
@@ -79,7 +79,6 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
                 // Assign scope requirements to operations based on AuthorizeAttribute
                 options.OperationFilter<SecurityRequirementsOperationFilter>();
             });
-
 
             // Configure Abp and Dependency Injection
             return services.AddAbp<YoyoCmsTemplateWebHostModule>(
@@ -98,18 +97,16 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
 
             app.UseStaticFiles();
 
+           
 
             // TODO:IdentiyServer Config Use
             if (bool.Parse(_appConfiguration["Authentication:JwtBearer:IsEnabled"]))
             {
                 app.UseAuthentication();
-                app.UseJwtTokenMiddleware();
             }
             else if (bool.Parse(_appConfiguration["Authentication:IdentityServer4:IsEnabled"]))
             {
-                app.UseAuthentication();
-                app.UseJwtTokenMiddleware("IdentityBearer");
-                //app.UseIdentityServer();
+                app.UseJwtTokenMiddleware(JwtBearerDefaults.AuthenticationScheme);
             }
 
             app.UseAbpRequestLocalization();
@@ -123,15 +120,27 @@ namespace LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.Startup
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "defaultWithArea",
+                    template: "{area}/{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapRoute(
                     name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
 
             // Enable middleware to serve generated Swagger as a JSON endpoint
             app.UseSwagger();
             // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
+            //app.UseSwaggerUI(options =>
+            //{
+            //    options.SwaggerEndpoint(_appConfiguration["App:ServerRootAddress"] + "/swagger/v1/swagger.json", "AbpCoreMvcIdentiyServer API V1");
+            //    options.IndexStream = () => Assembly.GetExecutingAssembly()
+            //        .GetManifestResourceStream("AbpCoreMvcIdentiyServer.Web.Host.wwwroot.swagger.ui.index.html");
+            //}); // URL: /swagger
+
             app.UseSwaggerUI(options =>
             {
+                //options.SwaggerEndpoint(_appConfiguration["App:ServerRootAddress"] + "/swagger/v1/swagger.json", "AbpCoreMvcIdentiyServer API V1");
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "YoyoCmsTemplate API V1");
                 options.IndexStream = () => Assembly.GetExecutingAssembly()
                     .GetManifestResourceStream("LTMCompanyNameFree.YoyoCmsTemplate.Web.Host.wwwroot.swagger.ui.index.html");
