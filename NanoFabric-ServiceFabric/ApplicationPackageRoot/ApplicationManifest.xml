@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="NanoFabric_ServiceFabricType" ApplicationTypeVersion="1.1.1" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="NanoFabric_ServiceFabricType" ApplicationTypeVersion="1.1.2" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
     <Parameter Name="SPAHost_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
     <Parameter Name="SPAHost_InstanceCount" DefaultValue="-1" />
@@ -16,35 +16,35 @@
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="SPAHostPkg" ServiceManifestVersion="1.0.3" />
+    <ServiceManifestRef ServiceManifestName="SPAHostPkg" ServiceManifestVersion="1.0.4" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[SPAHost_ASPNETCORE_ENVIRONMENT]" />
     </EnvironmentOverrides>
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="AbpHostPkg" ServiceManifestVersion="1.1.13" />
+    <ServiceManifestRef ServiceManifestName="AbpHostPkg" ServiceManifestVersion="1.1.14" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[AbpHost_ASPNETCORE_ENVIRONMENT]" />
     </EnvironmentOverrides>
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="ServiceAPkg" ServiceManifestVersion="1.0.0" />
+    <ServiceManifestRef ServiceManifestName="ServiceAPkg" ServiceManifestVersion="1.0.1" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[ServiceA_ASPNETCORE_ENVIRONMENT]" />
     </EnvironmentOverrides>
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="NanoFabricGatewayPkg" ServiceManifestVersion="1.0.0" />
+    <ServiceManifestRef ServiceManifestName="NanoFabricGatewayPkg" ServiceManifestVersion="1.0.1" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[NanoFabricGateway_ASPNETCORE_ENVIRONMENT]" />
     </EnvironmentOverrides>
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="ServiceOAuthPkg" ServiceManifestVersion="1.1.1" />
+    <ServiceManifestRef ServiceManifestName="ServiceOAuthPkg" ServiceManifestVersion="1.1.2" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[ServiceOAuth_ASPNETCORE_ENVIRONMENT]" />
